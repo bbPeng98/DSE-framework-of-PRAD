@@ -1,0 +1,52 @@
+Netlists:
+e1: (r15, reg)	(I0, f2io_16)
+e2: (r16, reg)	(i1, f2io_1)
+e3: (r9, reg)	(p2, data0)
+e4: (p2, res)	(r3, reg)	(m5, input_width_16_num_2)	(p10, data0)
+e9: (m5, output_width_16_num_0)	(r4, reg)	(p10, data2)
+e15: (I7, io2f_16)	(r8, reg)
+e17: (r8, reg)	(r9, reg)
+e18: (r3, reg)	(p13, data0)
+e19: (p10, res)	(p12, data0)
+e24: (r4, reg)	(p12, data1)
+e25: (p11, res)	(p12, data2)
+e30: (p12, res)	(p13, data2)
+e35: (p13, res)	(p14, data0)
+e40: (p14, res)	(r15, reg)
+e49: (m6, output_width_1_num_3)	(r16, reg)
+
+ID to Names:
+I0: io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0
+i1: io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid
+p2: op_hcompute_brighten_stencil$inner_compute$mul_hw_input_global_wrapper_stencil_1_259_260_i2620_i1096
+r3: brighten_stencil$d_reg__U1$reg0
+r4: brighten_stencil$d_reg__U2$reg0
+m5: brighten_stencil$ub_brighten_stencil_BANK_0_garnet
+m6: op_hcompute_hw_output_stencil_port_controller_garnet
+I7: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0
+r8: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg0
+r9: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg1
+p10: op_hcompute_blur_stencil_1$inner_compute$add_brighten_stencil_1_273_274_tree$opN_0$opN_1$_join_i2610_i2231
+p11: op_hcompute_blur_stencil$inner_compute$i2599_i2600_i651
+p12: op_hcompute_blur_stencil_1$inner_compute$add_brighten_stencil_1_273_274_tree$opN_0$_join_i2611_i1176
+p13: op_hcompute_blur_stencil_1$inner_compute$add_brighten_stencil_1_273_274_tree$_join_i2613_i2231
+p14: op_hcompute_hw_output_stencil$inner_compute$lshr_blur_stencil_2_288_289_i2630_i212
+r15: io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0$reg2
+r16: io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid$reg3
+
+Netlist Bus:
+e1: 16
+e2: 1
+e3: 16
+e4: 16
+e9: 16
+e15: 16
+e17: 16
+e18: 16
+e19: 16
+e24: 16
+e25: 16
+e30: 16
+e35: 16
+e40: 16
+e49: 1

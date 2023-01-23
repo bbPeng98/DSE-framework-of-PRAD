@@ -1,0 +1,4 @@
+placement=design.place
+bitstream=laplacian_pyramid.bs
+input=input.pgm
+output=gold.pgm

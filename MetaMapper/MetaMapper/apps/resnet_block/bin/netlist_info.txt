@@ -1,0 +1,635 @@
+id to instance name
+  I0  io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0
+  i1  io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid
+  p2  op_hcompute_conv1_stencil$inner_compute$i2599_i2600_i651
+  p3  op_hcompute_conv1_stencil_1$inner_compute$mul_hw_kernel_global_wrapper_stencil_2_hw_input_global_wrapper_stencil_2_955_i2613_i1096
+  p4  op_hcompute_conv1_stencil_1$inner_compute$add_954_958_959_tree$opN_1$_join_i2617_i412
+  p5  op_hcompute_conv1_stencil_1$inner_compute$add_954_958_959_tree$opN_0$_join_i2610_i1905
+  p6  op_hcompute_conv1_stencil_1$inner_compute$add_954_958_959_tree$_join_i2618_i2231
+  m7  conv1_stencil$ub_conv1_stencil_BANK_0_garnet
+  p8  op_hcompute_conv1_stencil_2$inner_compute$mul_hw_kernel_global_wrapper_stencil_5_hw_input_global_wrapper_stencil_5_982_i2633_i1096
+  p9  op_hcompute_conv1_stencil_2$inner_compute$add_981_985_986_tree$opN_1$_join_i2637_i412
+  p10  op_hcompute_conv1_stencil_2$inner_compute$add_981_985_986_tree$opN_0$_join_i2630_i1905
+  p11  op_hcompute_conv1_stencil_2$inner_compute$add_981_985_986_tree$_join_i2638_i2231
+  m12  conv1_stencil$ub_conv1_stencil_BANK_1_garnet
+  p13  op_hcompute_conv1_stencil_3$inner_compute$mul_hw_kernel_global_wrapper_stencil_8_hw_input_global_wrapper_stencil_8_1009_i2653_i1096
+  p14  op_hcompute_conv1_stencil_3$inner_compute$add_1008_1012_1013_tree$opN_1$_join_i2657_i412
+  p15  op_hcompute_conv1_stencil_3$inner_compute$add_1008_1012_1013_tree$opN_0$_join_i2650_i1905
+  p16  op_hcompute_conv1_stencil_3$inner_compute$add_1008_1012_1013_tree$_join_i2658_i2231
+  m17  conv1_stencil$ub_conv1_stencil_BANK_2_garnet
+  p18  op_hcompute_conv2_stencil$inner_compute$i2664_i2665_i651
+  p19  op_hcompute_conv2_stencil_1$inner_compute$mul_hw_kernel2_global_wrapper_stencil_2_conv1_stencil_5_1039_i2678_i1096
+  p20  op_hcompute_conv2_stencil_1$inner_compute$add_1038_1042_1043_tree$opN_1$_join_i2682_i412
+  p21  op_hcompute_conv2_stencil_1$inner_compute$add_1038_1042_1043_tree$opN_0$_join_i2675_i1905
+  p22  op_hcompute_conv2_stencil_1$inner_compute$add_1038_1042_1043_tree$_join_i2683_i2231
+  m23  conv2_stencil$ub_conv2_stencil_BANK_0_garnet
+  p24  op_hcompute_conv2_stencil_2$inner_compute$mul_hw_kernel2_global_wrapper_stencil_5_conv1_stencil_8_1066_i2698_i1096
+  p25  op_hcompute_conv2_stencil_2$inner_compute$add_1065_1069_1070_tree$opN_1$_join_i2702_i412
+  p26  op_hcompute_conv2_stencil_2$inner_compute$add_1065_1069_1070_tree$opN_0$_join_i2695_i1905
+  p27  op_hcompute_conv2_stencil_2$inner_compute$add_1065_1069_1070_tree$_join_i2703_i2231
+  m28  conv2_stencil$ub_conv2_stencil_BANK_1_garnet
+  p29  op_hcompute_conv2_stencil_3$inner_compute$mul_hw_kernel2_global_wrapper_stencil_8_conv1_stencil_11_1093_i2718_i1096
+  p30  op_hcompute_conv2_stencil_3$inner_compute$add_1092_1096_1097_tree$opN_1$_join_i2722_i412
+  p31  op_hcompute_conv2_stencil_3$inner_compute$add_1092_1096_1097_tree$opN_0$_join_i2715_i1905
+  p32  op_hcompute_conv2_stencil_3$inner_compute$add_1092_1096_1097_tree$_join_i2723_i2231
+  m33  conv2_stencil$ub_conv2_stencil_BANK_2_garnet
+  m34  hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_BANK_0_garnet
+  m35  hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_BANK_1_garnet
+  m36  hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_BANK_2_garnet
+  m37  hw_kernel2_global_wrapper_stencil$ub_hw_kernel2_global_wrapper_stencil_BANK_0_garnet
+  m38  hw_kernel2_global_wrapper_stencil$ub_hw_kernel2_global_wrapper_stencil_BANK_1_garnet
+  m39  hw_kernel2_global_wrapper_stencil$ub_hw_kernel2_global_wrapper_stencil_BANK_2_garnet
+  m40  hw_kernel2_global_wrapper_stencil$ub_hw_kernel2_global_wrapper_stencil_BANK_3_garnet
+  m41  hw_kernel2_global_wrapper_stencil$ub_hw_kernel2_global_wrapper_stencil_BANK_4_garnet
+  m42  hw_kernel2_global_wrapper_stencil$ub_hw_kernel2_global_wrapper_stencil_BANK_5_garnet
+  m43  hw_kernel2_global_wrapper_stencil$ub_hw_kernel2_global_wrapper_stencil_BANK_6_garnet
+  m44  hw_kernel2_global_wrapper_stencil$ub_hw_kernel2_global_wrapper_stencil_BANK_7_garnet
+  m45  hw_kernel2_global_wrapper_stencil$ub_hw_kernel2_global_wrapper_stencil_BANK_8_garnet
+  m46  hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_0_garnet
+  m47  hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_1_garnet
+  m48  hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_2_garnet
+  m49  hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_3_garnet
+  m50  hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_4_garnet
+  m51  hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_5_garnet
+  m52  hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_6_garnet
+  m53  hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_7_garnet
+  m54  hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_8_garnet
+  m55  op_hcompute_hw_output_stencil_port_controller_garnet
+  r56  io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0$reg0
+  r57  io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid$reg1
+  I58  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0
+  r59  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg2
+  r60  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg3
+  r61  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg4
+  r62  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg5
+  r63  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg6
+  I64  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0
+  r65  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0$reg7
+  r66  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0$reg8
+  r67  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0$reg9
+  r68  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0$reg10
+  r69  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0$reg11
+  r70  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0$reg12
+  r71  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0$reg13
+  r72  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0$reg14
+  r73  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0$reg15
+  r74  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0$reg16
+  r75  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0$reg17
+  r76  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0$reg18
+  r77  io16in_hw_kernel2_stencil_op_hcompute_hw_kernel2_global_wrapper_stencil_read_0$reg19
+  I78  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0
+  r79  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg20
+  r80  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg21
+  r81  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg22
+  r82  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg23
+  r83  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg24
+  r84  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg25
+  r85  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg26
+  r86  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg27
+  r87  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg28
+  r88  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg29
+  r89  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg30
+  r90  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg31
+  r91  io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg32
+id_to_Instrs
+  I0, 2
+  i1, 2
+  p2, 151115727451828647362752
+  p3, 152297111705095850426444
+  p4, 151117817123493474992304
+  p5, 151116600097992436351024
+  p6, 157286451574951303971008
+  m7, <class 'peak.mapper.utils.Unbound'>
+  p8, 152297111705095850426444
+  p9, 151117817123493474992304
+  p10, 151116600097992436351024
+  p11, 157286451574951303971008
+  m12, <class 'peak.mapper.utils.Unbound'>
+  p13, 152297111705095850426444
+  p14, 151117817123493474992304
+  p15, 151116600097992436351024
+  p16, 157286451574951303971008
+  m17, <class 'peak.mapper.utils.Unbound'>
+  p18, 151115727451828647362752
+  p19, 152297111705095850426444
+  p20, 151117817123493474992304
+  p21, 151116600097992436351024
+  p22, 157286451574951303971008
+  m23, <class 'peak.mapper.utils.Unbound'>
+  p24, 152297111705095850426444
+  p25, 151117817123493474992304
+  p26, 151116600097992436351024
+  p27, 157286451574951303971008
+  m28, <class 'peak.mapper.utils.Unbound'>
+  p29, 152297111705095850426444
+  p30, 151117817123493474992304
+  p31, 151116600097992436351024
+  p32, 157286451574951303971008
+  m33, <class 'peak.mapper.utils.Unbound'>
+  m34, <class 'peak.mapper.utils.Unbound'>
+  m35, <class 'peak.mapper.utils.Unbound'>
+  m36, <class 'peak.mapper.utils.Unbound'>
+  m37, <class 'peak.mapper.utils.Unbound'>
+  m38, <class 'peak.mapper.utils.Unbound'>
+  m39, <class 'peak.mapper.utils.Unbound'>
+  m40, <class 'peak.mapper.utils.Unbound'>
+  m41, <class 'peak.mapper.utils.Unbound'>
+  m42, <class 'peak.mapper.utils.Unbound'>
+  m43, <class 'peak.mapper.utils.Unbound'>
+  m44, <class 'peak.mapper.utils.Unbound'>
+  m45, <class 'peak.mapper.utils.Unbound'>
+  m46, <class 'peak.mapper.utils.Unbound'>
+  m47, <class 'peak.mapper.utils.Unbound'>
+  m48, <class 'peak.mapper.utils.Unbound'>
+  m49, <class 'peak.mapper.utils.Unbound'>
+  m50, <class 'peak.mapper.utils.Unbound'>
+  m51, <class 'peak.mapper.utils.Unbound'>
+  m52, <class 'peak.mapper.utils.Unbound'>
+  m53, <class 'peak.mapper.utils.Unbound'>
+  m54, <class 'peak.mapper.utils.Unbound'>
+  m55, <class 'peak.mapper.utils.Unbound'>
+  r56, 0
+  r57, 0
+  I58, 1
+  r59, 0
+  r60, 0
+  r61, 0
+  r62, 0
+  r63, 0
+  I64, 1
+  r65, 0
+  r66, 0
+  r67, 0
+  r68, 0
+  r69, 0
+  r70, 0
+  r71, 0
+  r72, 0
+  r73, 0
+  r74, 0
+  r75, 0
+  r76, 0
+  r77, 0
+  I78, 1
+  r79, 0
+  r80, 0
+  r81, 0
+  r82, 0
+  r83, 0
+  r84, 0
+  r85, 0
+  r86, 0
+  r87, 0
+  r88, 0
+  r89, 0
+  r90, 0
+  r91, 0
+id_to_metadata
+  m7, {'ID': '_U0', 'config': {'agg2sram_0': {'agg_read_padding': [0], 'cycle_starting_addr': [3078], 'cycle_stride': [4, 32, 960, 2880], 'delay': [5], 'dimensionality': 4, 'extent': [8, 30, 3, 3], 'mode': [2], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0, 0, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 8, 0, 0]}, 'agg2sram_1': {'agg_read_padding': [7], 'cycle_starting_addr': [12], 'cycle_stride': [12, 92], 'delay': [0], 'dimensionality': 2, 'extent': [8, 30], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 8]}, 'in2agg_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960, 2880], 'dimensionality': 4, 'extent': [30, 30, 3, 3], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0, 0, 0]}, 'in2agg_1': {'cycle_starting_addr': [2], 'cycle_stride': [3, 92], 'dimensionality': 2, 'extent': [30, 30], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'sram2tb_0': {'cycle_starting_addr': [3072], 'cycle_stride': [4, 32, 960, 2880], 'dimensionality': 4, 'extent': [8, 30, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 8, 0, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0, 0, 0]}, 'sram2tb_1': {'cycle_starting_addr': [11712], 'cycle_stride': [4, 32, 896, 2688], 'dimensionality': 4, 'extent': [8, 28, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 8, 0, 8], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0, 0, 0]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960, 2880], 'dimensionality': 4, 'extent': [30, 30, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0, 0, 0]}, 'tb2out_1': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896, 2688], 'dimensionality': 4, 'extent': [28, 28, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0, 1, 0]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 2, 'num_outputs': 2, 'use_prebuilt_mem': True, 'width': 16}
+  m12, {'ID': '_U1', 'config': {'agg2sram_0': {'agg_read_padding': [0], 'cycle_starting_addr': [3078], 'cycle_stride': [4, 32, 960, 2880], 'delay': [5], 'dimensionality': 4, 'extent': [8, 30, 3, 3], 'mode': [2], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0, 0, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 8, 0, 0]}, 'agg2sram_1': {'agg_read_padding': [7], 'cycle_starting_addr': [13], 'cycle_stride': [12, 92], 'delay': [0], 'dimensionality': 2, 'extent': [8, 30], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 8]}, 'in2agg_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960, 2880], 'dimensionality': 4, 'extent': [30, 30, 3, 3], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0, 0, 0]}, 'in2agg_1': {'cycle_starting_addr': [3], 'cycle_stride': [3, 92], 'dimensionality': 2, 'extent': [30, 30], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'sram2tb_0': {'cycle_starting_addr': [3072], 'cycle_stride': [4, 32, 960, 2880], 'dimensionality': 4, 'extent': [8, 30, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 8, 0, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0, 0, 0]}, 'sram2tb_1': {'cycle_starting_addr': [11712], 'cycle_stride': [4, 32, 896, 2688], 'dimensionality': 4, 'extent': [8, 28, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 8, 0, 8], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0, 0, 0]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960, 2880], 'dimensionality': 4, 'extent': [30, 30, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0, 0, 0]}, 'tb2out_1': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896, 2688], 'dimensionality': 4, 'extent': [28, 28, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0, 1, 0]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 2, 'num_outputs': 2, 'use_prebuilt_mem': True, 'width': 16}
+  m17, {'ID': '_U2', 'config': {'agg2sram_0': {'agg_read_padding': [0], 'cycle_starting_addr': [3078], 'cycle_stride': [4, 32, 960, 2880], 'delay': [5], 'dimensionality': 4, 'extent': [8, 30, 3, 3], 'mode': [2], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0, 0, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 8, 0, 0]}, 'agg2sram_1': {'agg_read_padding': [7], 'cycle_starting_addr': [14], 'cycle_stride': [12, 92], 'delay': [0], 'dimensionality': 2, 'extent': [8, 30], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 8]}, 'in2agg_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960, 2880], 'dimensionality': 4, 'extent': [30, 30, 3, 3], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0, 0, 0]}, 'in2agg_1': {'cycle_starting_addr': [4], 'cycle_stride': [3, 92], 'dimensionality': 2, 'extent': [30, 30], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'sram2tb_0': {'cycle_starting_addr': [3072], 'cycle_stride': [4, 32, 960, 2880], 'dimensionality': 4, 'extent': [8, 30, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 8, 0, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0, 0, 0]}, 'sram2tb_1': {'cycle_starting_addr': [11712], 'cycle_stride': [4, 32, 896, 2688], 'dimensionality': 4, 'extent': [8, 28, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 8, 0, 8], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0, 0, 0]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960, 2880], 'dimensionality': 4, 'extent': [30, 30, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0, 0, 0]}, 'tb2out_1': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896, 2688], 'dimensionality': 4, 'extent': [28, 28, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0, 1, 0]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 2, 'num_outputs': 2, 'use_prebuilt_mem': True, 'width': 16}
+  m23, {'ID': '_U3', 'config': {'agg2sram_0': {'agg_read_padding': [0], 'cycle_starting_addr': [11720], 'cycle_stride': [4, 32, 896, 2688], 'delay': [5], 'dimensionality': 4, 'extent': [7, 28, 3, 3], 'mode': [2], 'read_data_starting_addr': [0], 'read_data_stride': [1, 3, 0, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 7, 0, 0]}, 'agg2sram_1': {'agg_read_padding': [0], 'cycle_starting_addr': [10], 'cycle_stride': [12, 84], 'delay': [0], 'dimensionality': 2, 'extent': [7, 28], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1, 3], 'write_data_starting_addr': [0], 'write_data_stride': [1, 7]}, 'chain_en': 1, 'in2agg_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896, 2688], 'dimensionality': 4, 'extent': [28, 28, 3, 3], 'write_data_starting_addr': [0], 'write_data_stride': [1, 12, 0, 0]}, 'in2agg_1': {'cycle_starting_addr': [0], 'cycle_stride': [3, 84], 'dimensionality': 2, 'extent': [28, 28], 'write_data_starting_addr': [0], 'write_data_stride': [1, 12]}, 'sram2tb_0': {'cycle_starting_addr': [11714], 'cycle_stride': [4, 32, 896, 2688], 'dimensionality': 4, 'extent': [7, 28, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 7, 0, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 3, 0, 0]}, 'sram2tb_1': {'cycle_starting_addr': [19774], 'cycle_stride': [4, 28], 'dimensionality': 2, 'extent': [7, 28], 'read_data_starting_addr': [0], 'read_data_stride': [1, 7], 'write_data_starting_addr': [0], 'write_data_stride': [1, 3]}, 'tb2out_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896, 2688], 'dimensionality': 4, 'extent': [28, 28, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 12, 0, 0]}, 'tb2out_1': {'cycle_starting_addr': [19776], 'cycle_stride': [1, 28], 'dimensionality': 2, 'extent': [28, 28], 'read_data_starting_addr': [0], 'read_data_stride': [1, 12]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 2, 'num_outputs': 2, 'use_prebuilt_mem': True, 'width': 16}
+  m28, {'ID': '_U4', 'config': {'agg2sram_0': {'agg_read_padding': [0], 'cycle_starting_addr': [11720], 'cycle_stride': [4, 32, 896, 2688], 'delay': [5], 'dimensionality': 4, 'extent': [7, 28, 3, 3], 'mode': [2], 'read_data_starting_addr': [0], 'read_data_stride': [1, 3, 0, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 7, 0, 0]}, 'agg2sram_1': {'agg_read_padding': [0], 'cycle_starting_addr': [11], 'cycle_stride': [12, 84], 'delay': [0], 'dimensionality': 2, 'extent': [7, 28], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1, 3], 'write_data_starting_addr': [0], 'write_data_stride': [1, 7]}, 'chain_en': 1, 'in2agg_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896, 2688], 'dimensionality': 4, 'extent': [28, 28, 3, 3], 'write_data_starting_addr': [0], 'write_data_stride': [1, 12, 0, 0]}, 'in2agg_1': {'cycle_starting_addr': [1], 'cycle_stride': [3, 84], 'dimensionality': 2, 'extent': [28, 28], 'write_data_starting_addr': [0], 'write_data_stride': [1, 12]}, 'sram2tb_0': {'cycle_starting_addr': [11714], 'cycle_stride': [4, 32, 896, 2688], 'dimensionality': 4, 'extent': [7, 28, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 7, 0, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 3, 0, 0]}, 'sram2tb_1': {'cycle_starting_addr': [20558], 'cycle_stride': [4, 28], 'dimensionality': 2, 'extent': [7, 28], 'read_data_starting_addr': [0], 'read_data_stride': [1, 7], 'write_data_starting_addr': [0], 'write_data_stride': [1, 3]}, 'tb2out_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896, 2688], 'dimensionality': 4, 'extent': [28, 28, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 12, 0, 0]}, 'tb2out_1': {'cycle_starting_addr': [20560], 'cycle_stride': [1, 28], 'dimensionality': 2, 'extent': [28, 28], 'read_data_starting_addr': [0], 'read_data_stride': [1, 12]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 2, 'num_outputs': 2, 'use_prebuilt_mem': True, 'width': 16}
+  m33, {'ID': '_U5', 'config': {'agg2sram_0': {'agg_read_padding': [0], 'cycle_starting_addr': [12], 'cycle_stride': [12, 84], 'delay': [0], 'dimensionality': 2, 'extent': [7, 28], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1, 3], 'write_data_starting_addr': [0], 'write_data_stride': [1, 7]}, 'agg2sram_1': {'agg_read_padding': [0], 'cycle_starting_addr': [11720], 'cycle_stride': [4, 32, 896, 2688], 'delay': [5], 'dimensionality': 4, 'extent': [7, 28, 3, 3], 'mode': [2], 'read_data_starting_addr': [0], 'read_data_stride': [1, 3, 0, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 7, 0, 0]}, 'chain_en': 1, 'in2agg_0': {'cycle_starting_addr': [2], 'cycle_stride': [3, 84], 'dimensionality': 2, 'extent': [28, 28], 'write_data_starting_addr': [0], 'write_data_stride': [1, 12]}, 'in2agg_1': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896, 2688], 'dimensionality': 4, 'extent': [28, 28, 3, 3], 'write_data_starting_addr': [0], 'write_data_stride': [1, 12, 0, 0]}, 'sram2tb_0': {'cycle_starting_addr': [11714], 'cycle_stride': [4, 32, 896, 2688], 'dimensionality': 4, 'extent': [7, 28, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 7, 0, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 3, 0, 0]}, 'sram2tb_1': {'cycle_starting_addr': [21342], 'cycle_stride': [4, 28], 'dimensionality': 2, 'extent': [7, 28], 'read_data_starting_addr': [0], 'read_data_stride': [1, 7], 'write_data_starting_addr': [0], 'write_data_stride': [1, 3]}, 'tb2out_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896, 2688], 'dimensionality': 4, 'extent': [28, 28, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 12, 0, 0]}, 'tb2out_1': {'cycle_starting_addr': [21344], 'cycle_stride': [1, 28], 'dimensionality': 2, 'extent': [28, 28], 'read_data_starting_addr': [0], 'read_data_stride': [1, 12]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 2, 'num_outputs': 2, 'use_prebuilt_mem': True, 'width': 16}
+  m34, {'ID': '_U6', 'config': {'agg2sram_0': {'agg_read_padding': [0], 'cycle_starting_addr': [10], 'cycle_stride': [12, 96], 'delay': [0], 'dimensionality': 2, 'extent': [8, 32], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 8]}, 'in2agg_0': {'cycle_starting_addr': [0], 'cycle_stride': [3, 96], 'dimensionality': 2, 'extent': [32, 32], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'sram2tb_0': {'cycle_starting_addr': [3069], 'cycle_stride': [4, 32, 960, 2880], 'dimensionality': 4, 'extent': [8, 30, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 8, 0, 8], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0, 0, 0]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960, 2880], 'dimensionality': 4, 'extent': [30, 30, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0, 1, 0]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m35, {'ID': '_U7', 'config': {'agg2sram_0': {'agg_read_padding': [0], 'cycle_starting_addr': [11], 'cycle_stride': [12, 96], 'delay': [0], 'dimensionality': 2, 'extent': [8, 32], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 8]}, 'in2agg_0': {'cycle_starting_addr': [1], 'cycle_stride': [3, 96], 'dimensionality': 2, 'extent': [32, 32], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'sram2tb_0': {'cycle_starting_addr': [3070], 'cycle_stride': [4, 32, 960, 2880], 'dimensionality': 4, 'extent': [8, 30, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 8, 0, 8], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0, 0, 0]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960, 2880], 'dimensionality': 4, 'extent': [30, 30, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0, 1, 0]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m36, {'ID': '_U8', 'config': {'agg2sram_0': {'agg_read_padding': [0], 'cycle_starting_addr': [12], 'cycle_stride': [12, 96], 'delay': [0], 'dimensionality': 2, 'extent': [8, 32], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 8]}, 'in2agg_0': {'cycle_starting_addr': [2], 'cycle_stride': [3, 96], 'dimensionality': 2, 'extent': [32, 32], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'sram2tb_0': {'cycle_starting_addr': [3070], 'cycle_stride': [4, 32, 960, 2880], 'dimensionality': 4, 'extent': [8, 30, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 8, 0, 8], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0, 0, 0]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960, 2880], 'dimensionality': 4, 'extent': [30, 30, 3, 3], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0, 1, 0]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m37, {'ID': '_U9', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [28], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [0], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [11714], 'cycle_stride': [3584], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896], 'dimensionality': 3, 'extent': [28, 28, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m38, {'ID': '_U10', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [31], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [3], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [11714], 'cycle_stride': [3584], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896], 'dimensionality': 3, 'extent': [28, 28, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m39, {'ID': '_U11', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [34], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [6], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [11714], 'cycle_stride': [3584], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896], 'dimensionality': 3, 'extent': [28, 28, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m40, {'ID': '_U12', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [29], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [1], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [11714], 'cycle_stride': [3584], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896], 'dimensionality': 3, 'extent': [28, 28, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m41, {'ID': '_U13', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [32], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [4], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [11714], 'cycle_stride': [3584], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896], 'dimensionality': 3, 'extent': [28, 28, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m42, {'ID': '_U14', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [35], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [7], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [11714], 'cycle_stride': [3584], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896], 'dimensionality': 3, 'extent': [28, 28, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m43, {'ID': '_U15', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [30], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [2], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [11714], 'cycle_stride': [3584], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896], 'dimensionality': 3, 'extent': [28, 28, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m44, {'ID': '_U16', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [33], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [5], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [11714], 'cycle_stride': [3584], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896], 'dimensionality': 3, 'extent': [28, 28, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m45, {'ID': '_U17', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [36], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [8], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [11714], 'cycle_stride': [3584], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [11716], 'cycle_stride': [1, 32, 896], 'dimensionality': 3, 'extent': [28, 28, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m46, {'ID': '_U18', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [28], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [0], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [3072], 'cycle_stride': [3840], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960], 'dimensionality': 3, 'extent': [30, 30, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m47, {'ID': '_U19', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [31], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [3], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [3072], 'cycle_stride': [3840], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960], 'dimensionality': 3, 'extent': [30, 30, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m48, {'ID': '_U20', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [34], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [6], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [3072], 'cycle_stride': [3840], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960], 'dimensionality': 3, 'extent': [30, 30, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m49, {'ID': '_U21', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [29], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [1], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [3072], 'cycle_stride': [3840], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960], 'dimensionality': 3, 'extent': [30, 30, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m50, {'ID': '_U22', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [32], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [4], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [3072], 'cycle_stride': [3840], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960], 'dimensionality': 3, 'extent': [30, 30, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m51, {'ID': '_U23', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [35], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [7], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [3072], 'cycle_stride': [3840], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960], 'dimensionality': 3, 'extent': [30, 30, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m52, {'ID': '_U24', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [30], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [2], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [3072], 'cycle_stride': [3840], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960], 'dimensionality': 3, 'extent': [30, 30, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m53, {'ID': '_U25', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [33], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [5], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [3072], 'cycle_stride': [3840], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960], 'dimensionality': 3, 'extent': [30, 30, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m54, {'ID': '_U26', 'config': {'agg2sram_0': {'agg_read_padding': [28], 'cycle_starting_addr': [36], 'cycle_stride': [36], 'delay': [0], 'dimensionality': 1, 'extent': [3], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'in2agg_0': {'cycle_starting_addr': [8], 'cycle_stride': [9], 'dimensionality': 1, 'extent': [9], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'sram2tb_0': {'cycle_starting_addr': [3072], 'cycle_stride': [3840], 'dimensionality': 1, 'extent': [3], 'read_data_starting_addr': [0], 'read_data_stride': [1], 'write_data_starting_addr': [0], 'write_data_stride': [1]}, 'tb2out_0': {'cycle_starting_addr': [3074], 'cycle_stride': [1, 32, 960], 'dimensionality': 3, 'extent': [30, 30, 9], 'read_data_starting_addr': [0], 'read_data_stride': [0, 0, 1]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+  m55, {'ID': '_U27', 'config': {'stencil_valid': {'cycle_starting_addr': [19776], 'cycle_stride': [1, 28, 784], 'dimensionality': 3, 'extent': [28, 28, 3]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': True, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+buses
+  e1, 16
+  e2, 1
+  e3, 16
+  e8, 16
+  e14, 16
+  e20, 16
+  e26, 16
+  e32, 16
+  e37, 16
+  e42, 16
+  e48, 16
+  e54, 16
+  e55, 16
+  e60, 16
+  e65, 16
+  e70, 16
+  e76, 16
+  e82, 16
+  e87, 16
+  e92, 16
+  e98, 16
+  e99, 16
+  e104, 16
+  e109, 16
+  e114, 16
+  e120, 16
+  e126, 16
+  e131, 16
+  e136, 16
+  e142, 16
+  e143, 16
+  e148, 16
+  e153, 16
+  e158, 16
+  e163, 16
+  e169, 16
+  e175, 16
+  e180, 16
+  e185, 16
+  e191, 16
+  e192, 16
+  e197, 16
+  e202, 16
+  e207, 16
+  e208, 16
+  e213, 16
+  e219, 16
+  e225, 16
+  e230, 16
+  e235, 16
+  e241, 16
+  e246, 16
+  e251, 16
+  e252, 16
+  e257, 16
+  e263, 16
+  e269, 16
+  e274, 16
+  e279, 16
+  e285, 16
+  e290, 16
+  e295, 16
+  e296, 16
+  e297, 16
+  e298, 16
+  e299, 16
+  e300, 16
+  e301, 16
+  e302, 16
+  e303, 16
+  e304, 16
+  e305, 16
+  e306, 16
+  e307, 16
+  e308, 16
+  e309, 16
+  e310, 16
+  e311, 16
+  e312, 16
+  e313, 16
+  e314, 16
+  e315, 16
+  e320, 1
+  e322, 16
+  e324, 16
+  e325, 16
+  e326, 16
+  e328, 16
+  e329, 16
+  e330, 16
+  e331, 16
+  e332, 16
+  e334, 16
+  e335, 16
+  e336, 16
+  e337, 16
+netlist
+  e1
+    ('r56', 'reg')
+    ('I0', 'f2io_16')
+  e2
+    ('r57', 'reg')
+    ('i1', 'f2io_1')
+  e3
+    ('p2', 'res')
+    ('m7', 'input_width_16_num_3')
+    ('m12', 'input_width_16_num_3')
+    ('m17', 'input_width_16_num_3')
+  e8
+    ('m49', 'output_width_16_num_0')
+    ('p4', 'data0')
+  e14
+    ('m35', 'output_width_16_num_0')
+    ('p4', 'data1')
+    ('p9', 'data1')
+    ('p14', 'data1')
+  e20
+    ('m52', 'output_width_16_num_0')
+    ('p3', 'data0')
+  e26
+    ('m36', 'output_width_16_num_0')
+    ('p3', 'data1')
+    ('p8', 'data1')
+    ('p13', 'data1')
+  e32
+    ('p3', 'res')
+    ('p4', 'data2')
+  e37
+    ('p4', 'res')
+    ('p6', 'data0')
+  e42
+    ('m34', 'output_width_16_num_0')
+    ('p5', 'data0')
+    ('p10', 'data0')
+    ('p15', 'data0')
+  e48
+    ('m46', 'output_width_16_num_0')
+    ('p5', 'data1')
+  e54
+    ('m7', 'output_width_16_num_0')
+    ('p5', 'data2')
+  e60
+    ('p5', 'res')
+    ('p6', 'data2')
+  e65
+    ('p6', 'res')
+    ('m7', 'input_width_16_num_2')
+  e70
+    ('m50', 'output_width_16_num_0')
+    ('p9', 'data0')
+  e76
+    ('m53', 'output_width_16_num_0')
+    ('p8', 'data0')
+  e82
+    ('p8', 'res')
+    ('p9', 'data2')
+  e87
+    ('p9', 'res')
+    ('p11', 'data0')
+  e92
+    ('m47', 'output_width_16_num_0')
+    ('p10', 'data1')
+  e98
+    ('m12', 'output_width_16_num_0')
+    ('p10', 'data2')
+  e104
+    ('p10', 'res')
+    ('p11', 'data2')
+  e109
+    ('p11', 'res')
+    ('m12', 'input_width_16_num_2')
+  e114
+    ('m51', 'output_width_16_num_0')
+    ('p14', 'data0')
+  e120
+    ('m54', 'output_width_16_num_0')
+    ('p13', 'data0')
+  e126
+    ('p13', 'res')
+    ('p14', 'data2')
+  e131
+    ('p14', 'res')
+    ('p16', 'data0')
+  e136
+    ('m48', 'output_width_16_num_0')
+    ('p15', 'data1')
+  e142
+    ('m17', 'output_width_16_num_0')
+    ('p15', 'data2')
+  e148
+    ('p15', 'res')
+    ('p16', 'data2')
+  e153
+    ('p16', 'res')
+    ('m17', 'input_width_16_num_2')
+  e158
+    ('p18', 'res')
+    ('m23', 'input_width_16_num_3')
+    ('m28', 'input_width_16_num_3')
+    ('m33', 'input_width_16_num_2')
+  e163
+    ('m40', 'output_width_16_num_0')
+    ('p20', 'data0')
+  e99
+    ('m12', 'output_width_16_num_1')
+    ('p20', 'data1')
+    ('p25', 'data1')
+    ('p30', 'data1')
+  e169
+    ('m43', 'output_width_16_num_0')
+    ('p19', 'data0')
+  e143
+    ('m17', 'output_width_16_num_1')
+    ('p19', 'data1')
+    ('p24', 'data1')
+    ('p29', 'data1')
+  e175
+    ('p19', 'res')
+    ('p20', 'data2')
+  e180
+    ('p20', 'res')
+    ('p22', 'data0')
+  e55
+    ('m7', 'output_width_16_num_1')
+    ('p21', 'data0')
+    ('p26', 'data0')
+    ('p31', 'data0')
+  e185
+    ('m37', 'output_width_16_num_0')
+    ('p21', 'data1')
+  e191
+    ('m23', 'output_width_16_num_0')
+    ('p21', 'data2')
+  e197
+    ('p21', 'res')
+    ('p22', 'data2')
+  e202
+    ('p22', 'res')
+    ('m23', 'input_width_16_num_2')
+  e208
+    ('m28', 'output_width_16_num_1')
+    ('m23', 'input_width_16_num_1')
+  e213
+    ('m41', 'output_width_16_num_0')
+    ('p25', 'data0')
+  e219
+    ('m44', 'output_width_16_num_0')
+    ('p24', 'data0')
+  e225
+    ('p24', 'res')
+    ('p25', 'data2')
+  e230
+    ('p25', 'res')
+    ('p27', 'data0')
+  e235
+    ('m38', 'output_width_16_num_0')
+    ('p26', 'data1')
+  e207
+    ('m28', 'output_width_16_num_0')
+    ('p26', 'data2')
+  e241
+    ('p26', 'res')
+    ('p27', 'data2')
+  e246
+    ('p27', 'res')
+    ('m28', 'input_width_16_num_2')
+  e252
+    ('m33', 'output_width_16_num_1')
+    ('m28', 'input_width_16_num_1')
+  e257
+    ('m42', 'output_width_16_num_0')
+    ('p30', 'data0')
+  e263
+    ('m45', 'output_width_16_num_0')
+    ('p29', 'data0')
+  e269
+    ('p29', 'res')
+    ('p30', 'data2')
+  e274
+    ('p30', 'res')
+    ('p32', 'data0')
+  e279
+    ('m39', 'output_width_16_num_0')
+    ('p31', 'data1')
+  e251
+    ('m33', 'output_width_16_num_0')
+    ('p31', 'data2')
+  e285
+    ('p31', 'res')
+    ('p32', 'data2')
+  e290
+    ('p32', 'res')
+    ('m33', 'input_width_16_num_3')
+  e295
+    ('r61', 'reg')
+    ('m34', 'input_width_16_num_2')
+  e296
+    ('r62', 'reg')
+    ('m35', 'input_width_16_num_2')
+  e297
+    ('r63', 'reg')
+    ('m36', 'input_width_16_num_2')
+  e298
+    ('r69', 'reg')
+    ('m37', 'input_width_16_num_2')
+  e299
+    ('r70', 'reg')
+    ('m38', 'input_width_16_num_2')
+  e300
+    ('r71', 'reg')
+    ('m39', 'input_width_16_num_2')
+  e301
+    ('r72', 'reg')
+    ('m40', 'input_width_16_num_2')
+  e302
+    ('r73', 'reg')
+    ('m41', 'input_width_16_num_2')
+  e303
+    ('r74', 'reg')
+    ('m42', 'input_width_16_num_2')
+  e304
+    ('r75', 'reg')
+    ('m43', 'input_width_16_num_2')
+  e305
+    ('r76', 'reg')
+    ('m44', 'input_width_16_num_2')
+  e306
+    ('r77', 'reg')
+    ('m45', 'input_width_16_num_2')
+  e307
+    ('r83', 'reg')
+    ('m46', 'input_width_16_num_2')
+  e308
+    ('r84', 'reg')
+    ('m47', 'input_width_16_num_2')
+  e309
+    ('r85', 'reg')
+    ('m48', 'input_width_16_num_2')
+  e310
+    ('r86', 'reg')
+    ('m49', 'input_width_16_num_2')
+  e311
+    ('r87', 'reg')
+    ('m50', 'input_width_16_num_2')
+  e312
+    ('r88', 'reg')
+    ('m51', 'input_width_16_num_2')
+  e313
+    ('r89', 'reg')
+    ('m52', 'input_width_16_num_2')
+  e314
+    ('r90', 'reg')
+    ('m53', 'input_width_16_num_2')
+  e315
+    ('r91', 'reg')
+    ('m54', 'input_width_16_num_2')
+  e192
+    ('m23', 'output_width_16_num_1')
+    ('r56', 'reg')
+  e320
+    ('m55', 'output_width_1_num_3')
+    ('r57', 'reg')
+  e322
+    ('I58', 'io2f_16')
+    ('r59', 'reg')
+  e324
+    ('r59', 'reg')
+    ('r60', 'reg')
+  e325
+    ('r60', 'reg')
+    ('r61', 'reg')
+    ('r62', 'reg')
+    ('r63', 'reg')
+  e326
+    ('I64', 'io2f_16')
+    ('r65', 'reg')
+  e328
+    ('r65', 'reg')
+    ('r66', 'reg')
+    ('r67', 'reg')
+    ('r68', 'reg')
+  e329
+    ('r66', 'reg')
+    ('r69', 'reg')
+    ('r70', 'reg')
+    ('r71', 'reg')
+    ('r72', 'reg')
+  e330
+    ('r67', 'reg')
+    ('r73', 'reg')
+    ('r74', 'reg')
+    ('r75', 'reg')
+    ('r76', 'reg')
+  e331
+    ('r68', 'reg')
+    ('r77', 'reg')
+  e332
+    ('I78', 'io2f_16')
+    ('r79', 'reg')
+  e334
+    ('r79', 'reg')
+    ('r80', 'reg')
+    ('r81', 'reg')
+    ('r82', 'reg')
+  e335
+    ('r80', 'reg')
+    ('r83', 'reg')
+    ('r84', 'reg')
+    ('r85', 'reg')
+    ('r86', 'reg')
+  e336
+    ('r81', 'reg')
+    ('r87', 'reg')
+    ('r88', 'reg')
+    ('r89', 'reg')
+    ('r90', 'reg')
+  e337
+    ('r82', 'reg')
+    ('r91', 'reg')

@@ -1,0 +1,84 @@
+id to instance name
+  I0  io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0
+  i1  io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid
+  m2  op_hcompute_hw_output_stencil_port_controller_garnet
+  I3  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0
+  r4  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg0
+  r5  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg1
+  r6  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg2
+  p7  op_hcompute_hw_output_stencil$inner_compute$ule_268_hw_input_global_wrapper_stencil_1_269_i2607_i1705
+  p8  op_hcompute_hw_output_stencil$inner_compute$ult_hw_input_global_wrapper_stencil_1_266_267_i2605_i571
+  p9  op_hcompute_hw_output_stencil$inner_compute$bitor_267_269_270_i2608_i532
+  p10  op_hcompute_hw_output_stencil$inner_compute$bitxor_270_269_271_i2609_i173
+  p11  op_hcompute_hw_output_stencil$inner_compute$mux_271_272_273_i2610_i1784
+  r12  io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0$reg3
+  r13  io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid$reg4
+id_to_Instrs
+  I0, 2
+  i1, 2
+  m2, <class 'peak.mapper.utils.Unbound'>
+  I3, 1
+  r4, 0
+  r5, 0
+  r6, 0
+  p7, 11673606935587387292704644
+  p8, 11797026051975585870081924
+  p9, 15962392065250629667190976
+  p10, 5611209066412509427021888
+  p11, 226678779324515379314700
+  r12, 0
+  r13, 0
+id_to_metadata
+  m2, {'ID': '_U0', 'config': {'stencil_valid': {'cycle_starting_addr': [2], 'cycle_stride': [1, 64], 'dimensionality': 2, 'extent': [64, 64]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': True, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+buses
+  e1, 16
+  e2, 1
+  e3, 16
+  e5, 16
+  e6, 16
+  e8, 1
+  e12, 16
+  e14, 1
+  e19, 1
+  e24, 1
+  e28, 16
+  e37, 1
+netlist
+  e1
+    ('r12', 'reg')
+    ('I0', 'f2io_16')
+  e2
+    ('r13', 'reg')
+    ('i1', 'f2io_1')
+  e3
+    ('I3', 'io2f_16')
+    ('r4', 'reg')
+  e5
+    ('r4', 'reg')
+    ('r5', 'reg')
+    ('r6', 'reg')
+  e6
+    ('r5', 'reg')
+    ('p7', 'data0')
+  e8
+    ('p7', 'res_p')
+    ('p9', 'bit0')
+    ('p10', 'bit2')
+  e12
+    ('r6', 'reg')
+    ('p8', 'data1')
+  e14
+    ('p8', 'res_p')
+    ('p9', 'bit2')
+  e19
+    ('p9', 'res_p')
+    ('p10', 'bit1')
+  e24
+    ('p10', 'res_p')
+    ('p11', 'bit0')
+  e28
+    ('p11', 'res')
+    ('r12', 'reg')
+  e37
+    ('m2', 'output_width_1_num_3')
+    ('r13', 'reg')

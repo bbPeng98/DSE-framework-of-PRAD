@@ -1,0 +1,13 @@
+{
+    "hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_BANK_0_garnet": 0,
+    "op_hcompute_hw_output_stencil_2_port_controller_garnet": 1,
+    "op_hcompute_hw_output_stencil_1_port_controller_garnet": 1,
+    "hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_BANK_1_garnet": 0,
+    "hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_BANK_2_garnet": 1,
+    "gray_stencil$ub_gray_stencil_bank_8_garnet": 1,
+    "gray_stencil$ub_gray_stencil_bank_6_garnet": 1,
+    "gray_stencil$ub_gray_stencil_bank_7_garnet": 0,
+    "op_hcompute_hw_output_stencil_port_controller_garnet": 1,
+    "reciprocal_stencil$ub_reciprocal_stencil_BANK_0_garnet": 0,
+    "op_hcompute_reciprocal_stencil$inner_compute$rom_rom_div_lookupa0_garnet": 0
+}
