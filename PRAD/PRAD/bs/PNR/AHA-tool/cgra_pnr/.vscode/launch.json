@@ -1,0 +1,72 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "run-place-debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/thunder/build/example/placer",
+            "args": [
+                "/home/ssy/AHA-tool/GIB/design.layout",
+                "/home/ssy/AHA-tool/GIB/design.packed",
+                "/home/ssy/AHA-tool/GIB/design.place"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            // "setupCommands": [
+            //     {
+            //         "description": "Enable pretty-printing for gdb",
+            //         "text": "-enable-pretty-printing",
+            //         "ignoreFailures": true
+            //     }
+            // ],
+            "preLaunchTask": "make-task"
+            // "miDebuggerPath": "/usr/bin/gdb"
+        },
+        { 
+            "name": "run-route-debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/cyclone/build/example/router",
+            "args": [
+                // "../test/design.packed",
+                // "../test/design.place",
+                // "1",
+                // "/home/ssy/PNR/test/1bit.graph",
+                // "16",
+                // "/home/ssy/PNR/test/16bit.graph",
+                // "../test/design.route"
+                "-p",
+                "/home/ssy/AHA-tool/GIB/design.packed",
+                "-P",
+                "/home/ssy/AHA-tool/GIB/design.place",
+                "-o",
+                "/home/ssy/AHA-tool/GIB/design.route",
+                "-g",
+                "/home/ssy/AHA-tool/GIB/1bit.graph",
+                "-g",
+                "/home/ssy/AHA-tool/GIB/16bit.graph"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            // "setupCommands": [
+            //     {
+            //         "description": "Enable pretty-printing for gdb",
+            //         "text": "-enable-pretty-printing",
+            //         "ignoreFailures": true
+            //     }
+            // ],
+            "preLaunchTask": "make-task2"
+            // "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}

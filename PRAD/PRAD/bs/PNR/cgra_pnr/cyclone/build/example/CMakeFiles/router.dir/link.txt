@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -Werror -fPIC -funroll-all-loops -O3 -DNDEBUG  -rdynamic CMakeFiles/router.dir/router.cc.o  -o router  ../libcyclone.a -static-libgcc -static-libstdc++ 
