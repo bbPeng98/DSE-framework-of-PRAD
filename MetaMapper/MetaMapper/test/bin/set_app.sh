@@ -1,2 +1,0 @@
-export app=unoptimized_cascade
-export HLS_CLOCK_FREQUENCY=250000000

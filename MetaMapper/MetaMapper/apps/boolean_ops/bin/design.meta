@@ -1,4 +1,0 @@
-placement=design.place
-bitstream=boolean_ops.bs
-input=input.pgm
-output=gold.pgm

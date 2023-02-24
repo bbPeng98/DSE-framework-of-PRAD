@@ -1,6 +1,0 @@
-sed -i -e 's/_mapped//g' ./cascade_compute_mapped.json
-
-CLKWRK_PATH=/home/dai-dirk/MetaMapper/MetaMapper/clockwork LD_LIBRARY_PATH=/home/dai-dirk/MetaMapper/MetaMapper/clockwork/lib:/home/dai-dirk/MetaMapper/MetaMapper/coreir/lib LAKE_PATH=/home/dai-dirk/MetaMapper/MetaMapper/src/lake-aha LAKE_CONTROLLERS=/home/dai-dirk/MetaMapper/MetaMapper/test/bin LAKE_STREAM=./bin COREIR_PATH=/home/dai-dirk/MetaMapper/MetaMapper/coreir ./clockwork_codegen compile_mem_use_metamapper 1>mem_cout 2> >(tee -a mem_cout >&2); \
-EXIT_CODE=$?; rm unoptimized_cascade*; cd ..; exit $EXIT_CODE
-
-cp /home/dai-dirk/MetaMapper/MetaMapper/libs/*_header.json /home/dai-dirk/MetaMapper/test/bin/ && cp /home/dai-dirk/MetaMapper/MetaMapper/libs/*_header.json /home/dai-dirk/MetaMapper/MetaMapper/clockwork/ && cp /home/dai-dirk/MetaMapper/MetaMapper/libs/*_header.json /home/dai-dirk/MetaMapper/MetaMapper/garnet/headers/

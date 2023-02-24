@@ -1,2 +1,0 @@
-export app=unoptimized_resnet_block
-export HLS_CLOCK_FREQUENCY=250000000

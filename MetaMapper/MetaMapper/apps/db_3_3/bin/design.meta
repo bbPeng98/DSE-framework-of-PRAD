@@ -1,4 +1,0 @@
-placement=design.place
-bitstream=db_3_3.bs
-input=input.pgm
-output=gold.pgm
