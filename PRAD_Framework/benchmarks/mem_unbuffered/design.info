@@ -1,2 +1,0 @@
-layout=/home/dai-dirk/AHA_GIB/benchmarks/mem_unbuffered/design.layout
-graph=1 /home/dai-dirk/AHA_GIB/benchmarks/mem_unbuffered/1bit.graph 16 /home/dai-dirk/AHA_GIB/benchmarks/mem_unbuffered/16bit.graph

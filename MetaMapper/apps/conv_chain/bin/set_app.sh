@@ -1,2 +1,0 @@
-export app=unoptimized_conv_chain
-export HLS_CLOCK_FREQUENCY=250000000

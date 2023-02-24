@@ -1,7 +1,0 @@
-Block Name			X	Y		#Block ID
-----------------------------
-io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0		1	0		#I0
-io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid		1	0		#i1
-io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0		0	0		#I74
-io1in_reset		0	0		#i86
-io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0		2	0		#I108

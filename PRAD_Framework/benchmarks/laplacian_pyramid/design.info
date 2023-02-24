@@ -1,2 +1,0 @@
-layout=/home/dai-dirk/AHA_GIB/benchmarks/laplacian_pyramid/design.layout
-graph=1 /home/dai-dirk/AHA_GIB/benchmarks/laplacian_pyramid/1bit.graph 16 /home/dai-dirk/AHA_GIB/benchmarks/laplacian_pyramid/16bit.graph

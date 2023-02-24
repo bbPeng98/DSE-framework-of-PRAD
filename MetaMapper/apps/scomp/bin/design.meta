@@ -1,4 +1,0 @@
-placement=design.place
-bitstream=scomp.bs
-input=input.pgm
-output=gold.pgm

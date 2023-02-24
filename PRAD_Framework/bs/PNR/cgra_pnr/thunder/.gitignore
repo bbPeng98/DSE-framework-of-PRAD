@@ -1,6 +1,0 @@
-.idea
-cmake-build-debug
-build
-thunder.egg-info
-*.so
-placer

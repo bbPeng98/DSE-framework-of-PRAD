@@ -1,6 +1,0 @@
-{
-    "conv0_stencil$ub_conv0_stencil_bank_2_garnet": 0,
-    "hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_bank_2_garnet": 0,
-    "op_hcompute_hw_output_stencil_port_controller_garnet": 0,
-    "conv1_stencil$ub_conv1_stencil_bank_2_garnet": 0
-}
