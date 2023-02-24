@@ -1,3 +1,0 @@
-# Installs garnet pd scripts as python package to enable imports
-# Note: this script must be run from top of garnet repo
--e ./mflowgen

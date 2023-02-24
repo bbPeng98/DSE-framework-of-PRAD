@@ -1,2 +1,0 @@
-export app=unoptimized_camera_pipeline_shared
-export HLS_CLOCK_FREQUENCY=250000000

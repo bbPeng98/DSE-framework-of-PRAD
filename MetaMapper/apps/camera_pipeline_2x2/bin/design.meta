@@ -1,4 +1,0 @@
-placement=design.place
-bitstream=camera_pipeline_2x2.bs
-input=input.pgm
-output=gold.pgm
