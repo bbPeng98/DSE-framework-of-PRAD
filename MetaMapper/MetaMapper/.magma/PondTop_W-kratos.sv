@@ -1,0 +1,1411 @@
+module PondTop (
+  input logic clk,
+  input logic clk_en,
+  input logic [7:0] config_addr_in,
+  input logic [31:0] config_data_in,
+  input logic config_en,
+  input logic config_read,
+  input logic config_write,
+  input logic flush,
+  input logic [0:0] [15:0] input_width_16_num_0,
+  input logic [0:0] [15:0] input_width_16_num_1,
+  input logic [0:0] [15:0] input_width_16_num_2,
+  input logic input_width_1_num_0,
+  input logic input_width_1_num_1,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_starting_addr,
+  input logic [3:0] [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides,
+  input logic [2:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_dimensionality,
+  input logic [3:0] [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges,
+  input logic mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_enable,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_starting_addr,
+  input logic [3:0] [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_starting_addr,
+  input logic [3:0] [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides,
+  input logic [2:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_dimensionality,
+  input logic [3:0] [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges,
+  input logic mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_enable,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_starting_addr,
+  input logic [3:0] [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_starting_addr,
+  input logic [3:0] [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides,
+  input logic [2:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_dimensionality,
+  input logic [3:0] [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges,
+  input logic mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_enable,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_starting_addr,
+  input logic [3:0] [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_starting_addr,
+  input logic [3:0] [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides,
+  input logic [2:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_dimensionality,
+  input logic [3:0] [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges,
+  input logic mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_enable,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_starting_addr,
+  input logic [3:0] [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides,
+  input logic mode,
+  input logic rst_n,
+  input logic tile_en,
+  output logic [0:0] [31:0] config_data_out,
+  output logic [0:0] [15:0] output_width_16_num_0,
+  output logic [0:0] [15:0] output_width_16_num_1,
+  output logic output_width_1_num_0,
+  output logic output_width_1_num_1,
+  output logic output_width_1_num_2,
+  output logic output_width_1_num_3
+);
+
+logic [15:0] config_data_in_shrt;
+logic [0:0][15:0] config_data_out_shrt;
+logic [4:0] config_seq_addr_out;
+logic config_seq_clk_en;
+logic [0:0][0:0][15:0] config_seq_rd_data_stg;
+logic config_seq_ren_out;
+logic config_seq_wen_out;
+logic [0:0][15:0] config_seq_wr_data;
+logic gclk;
+logic [0:0][4:0] mem_ctrl_strg_ram_16_32_delay0_flat_addr_out_lifted;
+logic mem_ctrl_strg_ram_16_32_delay0_flat_clk;
+logic [0:0][0:0][15:0] mem_ctrl_strg_ram_16_32_delay0_flat_data_from_strg_lifted;
+logic [0:0][15:0] mem_ctrl_strg_ram_16_32_delay0_flat_data_out_f_;
+logic [0:0][0:0][15:0] mem_ctrl_strg_ram_16_32_delay0_flat_data_to_strg_lifted;
+logic mem_ctrl_strg_ram_16_32_delay0_flat_ren_to_strg_lifted;
+logic mem_ctrl_strg_ram_16_32_delay0_flat_valid_out_f_;
+logic mem_ctrl_strg_ram_16_32_delay0_flat_wen_to_strg_lifted;
+logic mem_ctrl_strg_ub_thin_flat_accessor_output_f_b_0;
+logic mem_ctrl_strg_ub_thin_flat_accessor_output_f_b_1;
+logic mem_ctrl_strg_ub_thin_flat_clk;
+logic [15:0] mem_ctrl_strg_ub_thin_flat_data_from_strg_lifted;
+logic [0:0][15:0] mem_ctrl_strg_ub_thin_flat_data_out_f_0;
+logic [0:0][15:0] mem_ctrl_strg_ub_thin_flat_data_out_f_1;
+logic [15:0] mem_ctrl_strg_ub_thin_flat_data_to_strg_lifted;
+logic [4:0] mem_ctrl_strg_ub_thin_flat_rd_addr_out_lifted;
+logic mem_ctrl_strg_ub_thin_flat_ren_to_strg_lifted;
+logic [4:0] mem_ctrl_strg_ub_thin_flat_tmp0_rdaddr_lifted;
+logic mem_ctrl_strg_ub_thin_flat_tmp0_rden_lifted;
+logic mem_ctrl_strg_ub_thin_flat_valid_out_f_b_0;
+logic mem_ctrl_strg_ub_thin_flat_valid_out_f_b_1;
+logic mem_ctrl_strg_ub_thin_flat_wen_to_strg_lifted;
+logic [4:0] mem_ctrl_strg_ub_thin_flat_wr_addr_out_lifted;
+logic memory_0_clk_en;
+logic [15:0] memory_0_data_in_p0;
+logic [15:0] memory_0_data_out_p0;
+logic [4:0] memory_0_read_addr_p0;
+logic [4:0] memory_0_read_addr_p1;
+logic memory_0_read_enable_p0;
+logic memory_0_read_enable_p1;
+logic [4:0] memory_0_write_addr_p0;
+logic memory_0_write_enable_p0;
+assign gclk = clk & tile_en;
+assign mem_ctrl_strg_ub_thin_flat_clk = gclk & (mode == 1'h0);
+assign mem_ctrl_strg_ram_16_32_delay0_flat_clk = gclk & (mode == 1'h1);
+always_comb begin
+  output_width_1_num_0 = 1'h0;
+  if (mode == 1'h0) begin
+    output_width_1_num_0 = mem_ctrl_strg_ub_thin_flat_accessor_output_f_b_0;
+  end
+  else if (mode == 1'h1) begin
+    output_width_1_num_0 = mem_ctrl_strg_ram_16_32_delay0_flat_valid_out_f_;
+  end
+end
+always_comb begin
+  output_width_1_num_1 = 1'h0;
+  output_width_1_num_1 = mem_ctrl_strg_ub_thin_flat_accessor_output_f_b_1;
+end
+always_comb begin
+  output_width_1_num_2 = 1'h0;
+  output_width_1_num_2 = mem_ctrl_strg_ub_thin_flat_valid_out_f_b_0;
+end
+always_comb begin
+  output_width_1_num_3 = 1'h0;
+  output_width_1_num_3 = mem_ctrl_strg_ub_thin_flat_valid_out_f_b_1;
+end
+always_comb begin
+  output_width_16_num_0 = 16'h0;
+  if (mode == 1'h0) begin
+    output_width_16_num_0 = mem_ctrl_strg_ub_thin_flat_data_out_f_0;
+  end
+  else if (mode == 1'h1) begin
+    output_width_16_num_0 = mem_ctrl_strg_ram_16_32_delay0_flat_data_out_f_;
+  end
+end
+always_comb begin
+  output_width_16_num_1 = 16'h0;
+  output_width_16_num_1 = mem_ctrl_strg_ub_thin_flat_data_out_f_1;
+end
+always_comb begin
+  memory_0_data_in_p0 = 16'h0;
+  memory_0_write_addr_p0 = 5'h0;
+  memory_0_write_enable_p0 = 1'h0;
+  memory_0_read_addr_p0 = 5'h0;
+  memory_0_read_enable_p0 = 1'h0;
+  if (|config_en) begin
+    memory_0_data_in_p0 = config_seq_wr_data;
+    memory_0_write_addr_p0 = config_seq_addr_out;
+    memory_0_write_enable_p0 = config_seq_wen_out;
+    memory_0_read_addr_p0 = config_seq_addr_out;
+    memory_0_read_enable_p0 = config_seq_ren_out;
+  end
+  else if (mode == 1'h0) begin
+    memory_0_data_in_p0 = mem_ctrl_strg_ub_thin_flat_data_to_strg_lifted;
+    memory_0_write_addr_p0 = mem_ctrl_strg_ub_thin_flat_wr_addr_out_lifted;
+    memory_0_write_enable_p0 = mem_ctrl_strg_ub_thin_flat_wen_to_strg_lifted;
+    memory_0_read_addr_p0 = mem_ctrl_strg_ub_thin_flat_rd_addr_out_lifted;
+    memory_0_read_enable_p0 = mem_ctrl_strg_ub_thin_flat_ren_to_strg_lifted;
+  end
+  else if (mode == 1'h1) begin
+    memory_0_data_in_p0 = mem_ctrl_strg_ram_16_32_delay0_flat_data_to_strg_lifted;
+    memory_0_write_addr_p0 = mem_ctrl_strg_ram_16_32_delay0_flat_addr_out_lifted;
+    memory_0_write_enable_p0 = mem_ctrl_strg_ram_16_32_delay0_flat_wen_to_strg_lifted;
+    memory_0_read_addr_p0 = mem_ctrl_strg_ram_16_32_delay0_flat_addr_out_lifted;
+    memory_0_read_enable_p0 = mem_ctrl_strg_ram_16_32_delay0_flat_ren_to_strg_lifted;
+  end
+end
+always_comb begin
+  mem_ctrl_strg_ub_thin_flat_data_from_strg_lifted = memory_0_data_out_p0;
+  mem_ctrl_strg_ram_16_32_delay0_flat_data_from_strg_lifted = memory_0_data_out_p0;
+  config_seq_rd_data_stg = memory_0_data_out_p0;
+end
+always_comb begin
+  memory_0_read_addr_p1 = 5'h0;
+  memory_0_read_enable_p1 = 1'h0;
+  if (mode == 1'h0) begin
+    memory_0_read_addr_p1 = mem_ctrl_strg_ub_thin_flat_tmp0_rdaddr_lifted;
+    memory_0_read_enable_p1 = mem_ctrl_strg_ub_thin_flat_tmp0_rden_lifted;
+  end
+end
+assign config_data_in_shrt = config_data_in[15:0];
+assign config_data_out[0] = 32'(config_data_out_shrt[0]);
+assign config_seq_clk_en = clk_en | (|config_en);
+assign memory_0_clk_en = clk_en | (|config_en);
+strg_ub_thin_flat mem_ctrl_strg_ub_thin_flat (
+  .clk(mem_ctrl_strg_ub_thin_flat_clk),
+  .clk_en(clk_en),
+  .data_from_strg_lifted(mem_ctrl_strg_ub_thin_flat_data_from_strg_lifted),
+  .data_in_f_0(input_width_16_num_0),
+  .data_in_f_1(input_width_16_num_1),
+  .flush(flush),
+  .rst_n(rst_n),
+  .strg_ub_thin_inst_in2regfile_0_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_starting_addr),
+  .strg_ub_thin_inst_in2regfile_0_addr_gen_strides(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides),
+  .strg_ub_thin_inst_in2regfile_0_for_loop_dimensionality(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_dimensionality),
+  .strg_ub_thin_inst_in2regfile_0_for_loop_ranges(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges),
+  .strg_ub_thin_inst_in2regfile_0_sched_gen_enable(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_enable),
+  .strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_starting_addr),
+  .strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides),
+  .strg_ub_thin_inst_in2regfile_1_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_starting_addr),
+  .strg_ub_thin_inst_in2regfile_1_addr_gen_strides(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides),
+  .strg_ub_thin_inst_in2regfile_1_for_loop_dimensionality(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_dimensionality),
+  .strg_ub_thin_inst_in2regfile_1_for_loop_ranges(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges),
+  .strg_ub_thin_inst_in2regfile_1_sched_gen_enable(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_enable),
+  .strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_starting_addr),
+  .strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides),
+  .strg_ub_thin_inst_regfile2out_0_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_starting_addr),
+  .strg_ub_thin_inst_regfile2out_0_addr_gen_strides(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides),
+  .strg_ub_thin_inst_regfile2out_0_for_loop_dimensionality(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_dimensionality),
+  .strg_ub_thin_inst_regfile2out_0_for_loop_ranges(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges),
+  .strg_ub_thin_inst_regfile2out_0_sched_gen_enable(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_enable),
+  .strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_starting_addr),
+  .strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides),
+  .strg_ub_thin_inst_regfile2out_1_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_starting_addr),
+  .strg_ub_thin_inst_regfile2out_1_addr_gen_strides(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides),
+  .strg_ub_thin_inst_regfile2out_1_for_loop_dimensionality(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_dimensionality),
+  .strg_ub_thin_inst_regfile2out_1_for_loop_ranges(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges),
+  .strg_ub_thin_inst_regfile2out_1_sched_gen_enable(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_enable),
+  .strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_starting_addr),
+  .strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides),
+  .accessor_output_f_b_0(mem_ctrl_strg_ub_thin_flat_accessor_output_f_b_0),
+  .accessor_output_f_b_1(mem_ctrl_strg_ub_thin_flat_accessor_output_f_b_1),
+  .data_out_f_0(mem_ctrl_strg_ub_thin_flat_data_out_f_0),
+  .data_out_f_1(mem_ctrl_strg_ub_thin_flat_data_out_f_1),
+  .data_to_strg_lifted(mem_ctrl_strg_ub_thin_flat_data_to_strg_lifted),
+  .rd_addr_out_lifted(mem_ctrl_strg_ub_thin_flat_rd_addr_out_lifted),
+  .ren_to_strg_lifted(mem_ctrl_strg_ub_thin_flat_ren_to_strg_lifted),
+  .tmp0_rdaddr_lifted(mem_ctrl_strg_ub_thin_flat_tmp0_rdaddr_lifted),
+  .tmp0_rden_lifted(mem_ctrl_strg_ub_thin_flat_tmp0_rden_lifted),
+  .valid_out_f_b_0(mem_ctrl_strg_ub_thin_flat_valid_out_f_b_0),
+  .valid_out_f_b_1(mem_ctrl_strg_ub_thin_flat_valid_out_f_b_1),
+  .wen_to_strg_lifted(mem_ctrl_strg_ub_thin_flat_wen_to_strg_lifted),
+  .wr_addr_out_lifted(mem_ctrl_strg_ub_thin_flat_wr_addr_out_lifted)
+);
+
+strg_ram_16_32_delay0_flat mem_ctrl_strg_ram_16_32_delay0_flat (
+  .clk(mem_ctrl_strg_ram_16_32_delay0_flat_clk),
+  .clk_en(clk_en),
+  .data_from_strg_lifted(mem_ctrl_strg_ram_16_32_delay0_flat_data_from_strg_lifted),
+  .data_in_f_(input_width_16_num_0),
+  .flush(flush),
+  .rd_addr_in_f_(input_width_16_num_1),
+  .ren_f_(input_width_1_num_0),
+  .rst_n(rst_n),
+  .wen_f_(input_width_1_num_1),
+  .wr_addr_in_f_(input_width_16_num_2),
+  .addr_out_lifted(mem_ctrl_strg_ram_16_32_delay0_flat_addr_out_lifted),
+  .data_out_f_(mem_ctrl_strg_ram_16_32_delay0_flat_data_out_f_),
+  .data_to_strg_lifted(mem_ctrl_strg_ram_16_32_delay0_flat_data_to_strg_lifted),
+  .ren_to_strg_lifted(mem_ctrl_strg_ram_16_32_delay0_flat_ren_to_strg_lifted),
+  .valid_out_f_(mem_ctrl_strg_ram_16_32_delay0_flat_valid_out_f_),
+  .wen_to_strg_lifted(mem_ctrl_strg_ram_16_32_delay0_flat_wen_to_strg_lifted)
+);
+
+sram_dp__0 memory_0 (
+  .clk(gclk),
+  .clk_en(memory_0_clk_en),
+  .data_in_p0(memory_0_data_in_p0),
+  .flush(flush),
+  .read_addr_p0(memory_0_read_addr_p0),
+  .read_addr_p1(memory_0_read_addr_p1),
+  .read_enable_p0(memory_0_read_enable_p0),
+  .read_enable_p1(memory_0_read_enable_p1),
+  .write_addr_p0(memory_0_write_addr_p0),
+  .write_enable_p0(memory_0_write_enable_p0),
+  .data_out_p0(memory_0_data_out_p0)
+);
+
+storage_config_seq_1_16_16 config_seq (
+  .clk(gclk),
+  .clk_en(config_seq_clk_en),
+  .config_addr_in(config_addr_in),
+  .config_data_in(config_data_in_shrt),
+  .config_en(config_en),
+  .config_rd(config_read),
+  .config_wr(config_write),
+  .flush(flush),
+  .rd_data_stg(config_seq_rd_data_stg),
+  .rst_n(rst_n),
+  .addr_out(config_seq_addr_out),
+  .rd_data_out(config_data_out_shrt),
+  .ren_out(config_seq_ren_out),
+  .wen_out(config_seq_wen_out),
+  .wr_data(config_seq_wr_data)
+);
+
+endmodule   // PondTop
+
+module PondTop_W (
+  input logic clk,
+  input logic clk_en,
+  input logic [7:0] config_addr_in,
+  input logic [31:0] config_data_in,
+  input logic config_en,
+  input logic config_read,
+  input logic config_write,
+  input logic flush,
+  input logic [0:0] [15:0] input_width_16_num_0,
+  input logic [0:0] [15:0] input_width_16_num_1,
+  input logic [0:0] [15:0] input_width_16_num_2,
+  input logic input_width_1_num_0,
+  input logic input_width_1_num_1,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_starting_addr,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides_0,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides_1,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides_2,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides_3,
+  input logic [2:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_dimensionality,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges_0,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges_1,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges_2,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges_3,
+  input logic mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_enable,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_starting_addr,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides_0,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides_1,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides_2,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides_3,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_starting_addr,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides_0,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides_1,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides_2,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides_3,
+  input logic [2:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_dimensionality,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges_0,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges_1,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges_2,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges_3,
+  input logic mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_enable,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_starting_addr,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides_0,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides_1,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides_2,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides_3,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_starting_addr,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides_0,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides_1,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides_2,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides_3,
+  input logic [2:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_dimensionality,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges_0,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges_1,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges_2,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges_3,
+  input logic mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_enable,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_starting_addr,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides_0,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides_1,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides_2,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides_3,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_starting_addr,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides_0,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides_1,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides_2,
+  input logic [4:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides_3,
+  input logic [2:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_dimensionality,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges_0,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges_1,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges_2,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges_3,
+  input logic mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_enable,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_starting_addr,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides_0,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides_1,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides_2,
+  input logic [15:0] mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides_3,
+  input logic mode,
+  input logic rst_n,
+  input logic tile_en,
+  output logic [0:0] [31:0] config_data_out,
+  output logic [0:0] [15:0] output_width_16_num_0,
+  output logic [0:0] [15:0] output_width_16_num_1,
+  output logic output_width_1_num_0,
+  output logic output_width_1_num_1,
+  output logic output_width_1_num_2,
+  output logic output_width_1_num_3
+);
+
+logic [3:0][4:0] PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides;
+logic [3:0][15:0] PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges;
+logic [3:0][15:0] PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides;
+logic [3:0][4:0] PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides;
+logic [3:0][15:0] PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges;
+logic [3:0][15:0] PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides;
+logic [3:0][4:0] PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides;
+logic [3:0][15:0] PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges;
+logic [3:0][15:0] PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides;
+logic [3:0][4:0] PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides;
+logic [3:0][15:0] PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges;
+logic [3:0][15:0] PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides[0] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides_0;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides[1] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides_1;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides[2] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides_2;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides[3] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides_3;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges[0] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges_0;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges[1] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges_1;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges[2] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges_2;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges[3] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges_3;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides[0] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides_0;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides[1] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides_1;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides[2] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides_2;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides[3] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides_3;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides[0] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides_0;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides[1] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides_1;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides[2] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides_2;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides[3] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides_3;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges[0] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges_0;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges[1] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges_1;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges[2] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges_2;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges[3] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges_3;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides[0] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides_0;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides[1] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides_1;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides[2] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides_2;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides[3] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides_3;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides[0] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides_0;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides[1] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides_1;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides[2] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides_2;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides[3] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides_3;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges[0] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges_0;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges[1] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges_1;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges[2] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges_2;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges[3] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges_3;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides[0] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides_0;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides[1] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides_1;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides[2] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides_2;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides[3] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides_3;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides[0] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides_0;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides[1] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides_1;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides[2] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides_2;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides[3] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides_3;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges[0] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges_0;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges[1] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges_1;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges[2] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges_2;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges[3] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges_3;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides[0] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides_0;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides[1] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides_1;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides[2] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides_2;
+assign PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides[3] = mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides_3;
+PondTop PondTop (
+  .clk(clk),
+  .clk_en(clk_en),
+  .config_addr_in(config_addr_in),
+  .config_data_in(config_data_in),
+  .config_en(config_en),
+  .config_read(config_read),
+  .config_write(config_write),
+  .flush(flush),
+  .input_width_16_num_0(input_width_16_num_0),
+  .input_width_16_num_1(input_width_16_num_1),
+  .input_width_16_num_2(input_width_16_num_2),
+  .input_width_1_num_0(input_width_1_num_0),
+  .input_width_1_num_1(input_width_1_num_1),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_starting_addr),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides(PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_addr_gen_strides),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_dimensionality(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_dimensionality),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges(PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_for_loop_ranges),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_enable(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_enable),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_starting_addr),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides(PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_starting_addr),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides(PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_addr_gen_strides),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_dimensionality(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_dimensionality),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges(PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_for_loop_ranges),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_enable(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_enable),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_starting_addr),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides(PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_starting_addr),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides(PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_addr_gen_strides),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_dimensionality(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_dimensionality),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges(PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_for_loop_ranges),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_enable(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_enable),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_starting_addr),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides(PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_starting_addr),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides(PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_addr_gen_strides),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_dimensionality(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_dimensionality),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges(PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_for_loop_ranges),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_enable(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_enable),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_starting_addr(mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_starting_addr),
+  .mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides(PondTop_mem_ctrl_strg_ub_thin_flat_strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides),
+  .mode(mode),
+  .rst_n(rst_n),
+  .tile_en(tile_en),
+  .config_data_out(config_data_out),
+  .output_width_16_num_0(output_width_16_num_0),
+  .output_width_16_num_1(output_width_16_num_1),
+  .output_width_1_num_0(output_width_1_num_0),
+  .output_width_1_num_1(output_width_1_num_1),
+  .output_width_1_num_2(output_width_1_num_2),
+  .output_width_1_num_3(output_width_1_num_3)
+);
+
+endmodule   // PondTop_W
+
+module addr_gen_4_16 (
+  input logic clk,
+  input logic clk_en,
+  input logic flush,
+  input logic [1:0] mux_sel,
+  input logic restart,
+  input logic rst_n,
+  input logic [15:0] starting_addr,
+  input logic step,
+  input logic [3:0] [15:0] strides,
+  output logic [15:0] addr_out
+);
+
+logic [15:0] calc_addr;
+logic [15:0] current_addr;
+logic [15:0] strt_addr;
+assign strt_addr = starting_addr;
+assign addr_out = calc_addr;
+assign calc_addr = current_addr;
+
+always_ff @(posedge clk, negedge rst_n) begin
+  if (~rst_n) begin
+    current_addr <= 16'h0;
+  end
+  else if (clk_en) begin
+    if (flush) begin
+      current_addr <= strt_addr;
+    end
+    else if (step) begin
+      if (restart) begin
+        current_addr <= strt_addr;
+      end
+      else current_addr <= current_addr + strides[mux_sel];
+    end
+  end
+end
+endmodule   // addr_gen_4_16
+
+module addr_gen_4_5 (
+  input logic clk,
+  input logic clk_en,
+  input logic flush,
+  input logic [1:0] mux_sel,
+  input logic restart,
+  input logic rst_n,
+  input logic [4:0] starting_addr,
+  input logic step,
+  input logic [3:0] [4:0] strides,
+  output logic [4:0] addr_out
+);
+
+logic [4:0] calc_addr;
+logic [4:0] current_addr;
+logic [4:0] strt_addr;
+assign strt_addr = starting_addr;
+assign addr_out = calc_addr;
+assign calc_addr = current_addr;
+
+always_ff @(posedge clk, negedge rst_n) begin
+  if (~rst_n) begin
+    current_addr <= 5'h0;
+  end
+  else if (clk_en) begin
+    if (flush) begin
+      current_addr <= strt_addr;
+    end
+    else if (step) begin
+      if (restart) begin
+        current_addr <= strt_addr;
+      end
+      else current_addr <= current_addr + strides[mux_sel];
+    end
+  end
+end
+endmodule   // addr_gen_4_5
+
+module for_loop_4_16 #(
+  parameter CONFIG_WIDTH = 5'h10,
+  parameter ITERATOR_SUPPORT = 3'h4,
+  parameter ITERATOR_SUPPORT2 = 2'h2
+)
+(
+  input logic clk,
+  input logic clk_en,
+  input logic [2:0] dimensionality,
+  input logic flush,
+  input logic [3:0] [15:0] ranges,
+  input logic rst_n,
+  input logic step,
+  output logic [1:0] mux_sel_out,
+  output logic restart
+);
+
+logic [3:0] clear;
+logic [3:0][15:0] dim_counter;
+logic done;
+logic [3:0] inc;
+logic [15:0] inced_cnt;
+logic [3:0] max_value;
+logic maxed_value;
+logic [1:0] mux_sel;
+assign mux_sel_out = mux_sel;
+assign inced_cnt = dim_counter[mux_sel] + 16'h1;
+assign maxed_value = (dim_counter[mux_sel] == ranges[mux_sel]) & inc[mux_sel];
+always_comb begin
+  mux_sel = 2'h0;
+  done = 1'h0;
+  if (~done) begin
+    if ((~max_value[0]) & (dimensionality > 3'h0)) begin
+      mux_sel = 2'h0;
+      done = 1'h1;
+    end
+  end
+  if (~done) begin
+    if ((~max_value[1]) & (dimensionality > 3'h1)) begin
+      mux_sel = 2'h1;
+      done = 1'h1;
+    end
+  end
+  if (~done) begin
+    if ((~max_value[2]) & (dimensionality > 3'h2)) begin
+      mux_sel = 2'h2;
+      done = 1'h1;
+    end
+  end
+  if (~done) begin
+    if ((~max_value[3]) & (dimensionality > 3'h3)) begin
+      mux_sel = 2'h3;
+      done = 1'h1;
+    end
+  end
+end
+always_comb begin
+  clear[0] = 1'h0;
+  if (((mux_sel > 2'h0) | (~done)) & step) begin
+    clear[0] = 1'h1;
+  end
+end
+always_comb begin
+  inc[0] = 1'h0;
+  if ((5'h0 == 5'h0) & step & (dimensionality > 3'h0)) begin
+    inc[0] = 1'h1;
+  end
+  else if ((mux_sel == 2'h0) & step & (dimensionality > 3'h0)) begin
+    inc[0] = 1'h1;
+  end
+end
+
+always_ff @(posedge clk, negedge rst_n) begin
+  if (~rst_n) begin
+    dim_counter[0] <= 16'h0;
+  end
+  else if (clk_en) begin
+    if (flush) begin
+      dim_counter[0] <= 16'h0;
+    end
+    else if (clear[0]) begin
+      dim_counter[0] <= 16'h0;
+    end
+    else if (inc[0]) begin
+      dim_counter[0] <= inced_cnt;
+    end
+  end
+end
+
+always_ff @(posedge clk, negedge rst_n) begin
+  if (~rst_n) begin
+    max_value[0] <= 1'h0;
+  end
+  else if (clk_en) begin
+    if (flush) begin
+      max_value[0] <= 1'h0;
+    end
+    else if (clear[0]) begin
+      max_value[0] <= 1'h0;
+    end
+    else if (inc[0]) begin
+      max_value[0] <= maxed_value;
+    end
+  end
+end
+always_comb begin
+  clear[1] = 1'h0;
+  if (((mux_sel > 2'h1) | (~done)) & step) begin
+    clear[1] = 1'h1;
+  end
+end
+always_comb begin
+  inc[1] = 1'h0;
+  if ((5'h1 == 5'h0) & step & (dimensionality > 3'h1)) begin
+    inc[1] = 1'h1;
+  end
+  else if ((mux_sel == 2'h1) & step & (dimensionality > 3'h1)) begin
+    inc[1] = 1'h1;
+  end
+end
+
+always_ff @(posedge clk, negedge rst_n) begin
+  if (~rst_n) begin
+    dim_counter[1] <= 16'h0;
+  end
+  else if (clk_en) begin
+    if (flush) begin
+      dim_counter[1] <= 16'h0;
+    end
+    else if (clear[1]) begin
+      dim_counter[1] <= 16'h0;
+    end
+    else if (inc[1]) begin
+      dim_counter[1] <= inced_cnt;
+    end
+  end
+end
+
+always_ff @(posedge clk, negedge rst_n) begin
+  if (~rst_n) begin
+    max_value[1] <= 1'h0;
+  end
+  else if (clk_en) begin
+    if (flush) begin
+      max_value[1] <= 1'h0;
+    end
+    else if (clear[1]) begin
+      max_value[1] <= 1'h0;
+    end
+    else if (inc[1]) begin
+      max_value[1] <= maxed_value;
+    end
+  end
+end
+always_comb begin
+  clear[2] = 1'h0;
+  if (((mux_sel > 2'h2) | (~done)) & step) begin
+    clear[2] = 1'h1;
+  end
+end
+always_comb begin
+  inc[2] = 1'h0;
+  if ((5'h2 == 5'h0) & step & (dimensionality > 3'h2)) begin
+    inc[2] = 1'h1;
+  end
+  else if ((mux_sel == 2'h2) & step & (dimensionality > 3'h2)) begin
+    inc[2] = 1'h1;
+  end
+end
+
+always_ff @(posedge clk, negedge rst_n) begin
+  if (~rst_n) begin
+    dim_counter[2] <= 16'h0;
+  end
+  else if (clk_en) begin
+    if (flush) begin
+      dim_counter[2] <= 16'h0;
+    end
+    else if (clear[2]) begin
+      dim_counter[2] <= 16'h0;
+    end
+    else if (inc[2]) begin
+      dim_counter[2] <= inced_cnt;
+    end
+  end
+end
+
+always_ff @(posedge clk, negedge rst_n) begin
+  if (~rst_n) begin
+    max_value[2] <= 1'h0;
+  end
+  else if (clk_en) begin
+    if (flush) begin
+      max_value[2] <= 1'h0;
+    end
+    else if (clear[2]) begin
+      max_value[2] <= 1'h0;
+    end
+    else if (inc[2]) begin
+      max_value[2] <= maxed_value;
+    end
+  end
+end
+always_comb begin
+  clear[3] = 1'h0;
+  if (((mux_sel > 2'h3) | (~done)) & step) begin
+    clear[3] = 1'h1;
+  end
+end
+always_comb begin
+  inc[3] = 1'h0;
+  if ((5'h3 == 5'h0) & step & (dimensionality > 3'h3)) begin
+    inc[3] = 1'h1;
+  end
+  else if ((mux_sel == 2'h3) & step & (dimensionality > 3'h3)) begin
+    inc[3] = 1'h1;
+  end
+end
+
+always_ff @(posedge clk, negedge rst_n) begin
+  if (~rst_n) begin
+    dim_counter[3] <= 16'h0;
+  end
+  else if (clk_en) begin
+    if (flush) begin
+      dim_counter[3] <= 16'h0;
+    end
+    else if (clear[3]) begin
+      dim_counter[3] <= 16'h0;
+    end
+    else if (inc[3]) begin
+      dim_counter[3] <= inced_cnt;
+    end
+  end
+end
+
+always_ff @(posedge clk, negedge rst_n) begin
+  if (~rst_n) begin
+    max_value[3] <= 1'h0;
+  end
+  else if (clk_en) begin
+    if (flush) begin
+      max_value[3] <= 1'h0;
+    end
+    else if (clear[3]) begin
+      max_value[3] <= 1'h0;
+    end
+    else if (inc[3]) begin
+      max_value[3] <= maxed_value;
+    end
+  end
+end
+assign restart = step & (~done);
+endmodule   // for_loop_4_16
+
+module sched_gen_4_16 (
+  input logic clk,
+  input logic clk_en,
+  input logic [15:0] cycle_count,
+  input logic enable,
+  input logic finished,
+  input logic flush,
+  input logic [1:0] mux_sel,
+  input logic rst_n,
+  input logic [15:0] sched_addr_gen_starting_addr,
+  input logic [3:0] [15:0] sched_addr_gen_strides,
+  output logic valid_output
+);
+
+logic [15:0] addr_out;
+logic valid_gate;
+logic valid_gate_inv;
+logic valid_out;
+assign valid_gate = ~valid_gate_inv;
+
+always_ff @(posedge clk, negedge rst_n) begin
+  if (~rst_n) begin
+    valid_gate_inv <= 1'h0;
+  end
+  else if (clk_en) begin
+    if (flush) begin
+      valid_gate_inv <= 1'h0;
+    end
+    else if (finished) begin
+      valid_gate_inv <= 1'h1;
+    end
+  end
+end
+always_comb begin
+  valid_out = (cycle_count == addr_out) & valid_gate & enable;
+end
+always_comb begin
+  valid_output = valid_out;
+end
+addr_gen_4_16 sched_addr_gen (
+  .clk(clk),
+  .clk_en(clk_en),
+  .flush(flush),
+  .mux_sel(mux_sel),
+  .restart(finished),
+  .rst_n(rst_n),
+  .starting_addr(sched_addr_gen_starting_addr),
+  .step(valid_out),
+  .strides(sched_addr_gen_strides),
+  .addr_out(addr_out)
+);
+
+endmodule   // sched_gen_4_16
+
+module sram_dp__0 (
+  input logic clk,
+  input logic clk_en,
+  input logic [15:0] data_in_p0,
+  input logic flush,
+  input logic [4:0] read_addr_p0,
+  input logic [4:0] read_addr_p1,
+  input logic read_enable_p0,
+  input logic read_enable_p1,
+  input logic [4:0] write_addr_p0,
+  input logic write_enable_p0,
+  output logic [15:0] data_out_p0,
+  output logic [15:0] data_out_p1
+);
+
+logic [15:0] data_array [31:0];
+
+always_ff @(posedge clk) begin
+  if (clk_en) begin
+    if (write_enable_p0 == 1'h1) begin
+      data_array[write_addr_p0] <= data_in_p0;
+    end
+  end
+end
+assign data_out_p0 = data_array[read_addr_p0];
+always_comb begin
+  data_out_p1 = data_array[read_addr_p1];
+end
+endmodule   // sram_dp__0
+
+module storage_config_seq_1_16_16 (
+  input logic clk,
+  input logic clk_en,
+  input logic [7:0] config_addr_in,
+  input logic [15:0] config_data_in,
+  input logic config_en,
+  input logic config_rd,
+  input logic config_wr,
+  input logic flush,
+  input logic [0:0][0:0] [15:0] rd_data_stg,
+  input logic rst_n,
+  output logic [4:0] addr_out,
+  output logic [0:0] [15:0] rd_data_out,
+  output logic ren_out,
+  output logic wen_out,
+  output logic [0:0] [15:0] wr_data
+);
+
+assign addr_out = config_addr_in[4:0];
+assign wr_data[0] = config_data_in;
+assign rd_data_out[0] = rd_data_stg[0];
+assign wen_out = config_wr;
+assign ren_out = config_rd;
+endmodule   // storage_config_seq_1_16_16
+
+module strg_ram_16_32_delay0 (
+  input logic clk,
+  input logic clk_en,
+  input logic [0:0][0:0] [15:0] data_from_strg,
+  input logic [15:0] data_in,
+  input logic flush,
+  input logic [15:0] rd_addr_in,
+  input logic ren,
+  input logic rst_n,
+  input logic wen,
+  input logic [15:0] wr_addr_in,
+  output logic [0:0] [4:0] addr_out,
+  output logic [15:0] data_out,
+  output logic [0:0][0:0] [15:0] data_to_strg,
+  output logic ren_to_strg,
+  output logic valid_out,
+  output logic wen_to_strg
+);
+
+logic [15:0] rd_addr;
+logic rd_bank;
+logic rd_valid;
+logic [15:0] wr_addr;
+assign wr_addr = wr_addr_in[15:0];
+assign rd_addr = rd_addr_in[15:0];
+assign rd_bank = 1'h0;
+assign rd_valid = ren;
+assign valid_out = rd_valid;
+assign wen_to_strg = wen;
+assign ren_to_strg = ren;
+assign data_to_strg[0] = data_in;
+assign addr_out[0] = wen_to_strg ? wr_addr[4:0]: rd_addr[4:0];
+assign data_out = data_from_strg[rd_bank];
+endmodule   // strg_ram_16_32_delay0
+
+module strg_ram_16_32_delay0_flat (
+  input logic clk,
+  input logic clk_en,
+  input logic [0:0][0:0] [15:0] data_from_strg_lifted,
+  input logic [0:0] [15:0] data_in_f_,
+  input logic flush,
+  input logic [0:0] [15:0] rd_addr_in_f_,
+  input logic ren_f_,
+  input logic rst_n,
+  input logic wen_f_,
+  input logic [0:0] [15:0] wr_addr_in_f_,
+  output logic [0:0] [4:0] addr_out_lifted,
+  output logic [0:0] [15:0] data_out_f_,
+  output logic [0:0][0:0] [15:0] data_to_strg_lifted,
+  output logic ren_to_strg_lifted,
+  output logic valid_out_f_,
+  output logic wen_to_strg_lifted
+);
+
+logic [0:0][15:0] data_in_f__intercept;
+logic [0:0][15:0] data_out_f__intercept;
+logic [0:0][15:0] rd_addr_in_f__intercept;
+logic [15:0] strg_ram_16_32_delay0_inst_data_out;
+logic [0:0][15:0] wr_addr_in_f__intercept;
+assign rd_addr_in_f__intercept = rd_addr_in_f_;
+assign wr_addr_in_f__intercept = wr_addr_in_f_;
+assign data_in_f__intercept = data_in_f_;
+assign data_out_f__intercept[0] = strg_ram_16_32_delay0_inst_data_out;
+assign data_out_f_ = data_out_f__intercept;
+strg_ram_16_32_delay0 strg_ram_16_32_delay0_inst (
+  .clk(clk),
+  .clk_en(clk_en),
+  .data_from_strg(data_from_strg_lifted),
+  .data_in(data_in_f__intercept[0]),
+  .flush(flush),
+  .rd_addr_in(rd_addr_in_f__intercept[0]),
+  .ren(ren_f_),
+  .rst_n(rst_n),
+  .wen(wen_f_),
+  .wr_addr_in(wr_addr_in_f__intercept[0]),
+  .addr_out(addr_out_lifted),
+  .data_out(strg_ram_16_32_delay0_inst_data_out),
+  .data_to_strg(data_to_strg_lifted),
+  .ren_to_strg(ren_to_strg_lifted),
+  .valid_out(valid_out_f_),
+  .wen_to_strg(wen_to_strg_lifted)
+);
+
+endmodule   // strg_ram_16_32_delay0_flat
+
+module strg_ub_thin (
+  input logic clk,
+  input logic clk_en,
+  input logic [15:0] data_from_strg,
+  input logic [1:0] [15:0] data_in,
+  input logic flush,
+  input logic [4:0] in2regfile_0_addr_gen_starting_addr,
+  input logic [3:0] [4:0] in2regfile_0_addr_gen_strides,
+  input logic [2:0] in2regfile_0_for_loop_dimensionality,
+  input logic [3:0] [15:0] in2regfile_0_for_loop_ranges,
+  input logic in2regfile_0_sched_gen_enable,
+  input logic [15:0] in2regfile_0_sched_gen_sched_addr_gen_starting_addr,
+  input logic [3:0] [15:0] in2regfile_0_sched_gen_sched_addr_gen_strides,
+  input logic [4:0] in2regfile_1_addr_gen_starting_addr,
+  input logic [3:0] [4:0] in2regfile_1_addr_gen_strides,
+  input logic [2:0] in2regfile_1_for_loop_dimensionality,
+  input logic [3:0] [15:0] in2regfile_1_for_loop_ranges,
+  input logic in2regfile_1_sched_gen_enable,
+  input logic [15:0] in2regfile_1_sched_gen_sched_addr_gen_starting_addr,
+  input logic [3:0] [15:0] in2regfile_1_sched_gen_sched_addr_gen_strides,
+  input logic [4:0] regfile2out_0_addr_gen_starting_addr,
+  input logic [3:0] [4:0] regfile2out_0_addr_gen_strides,
+  input logic [2:0] regfile2out_0_for_loop_dimensionality,
+  input logic [3:0] [15:0] regfile2out_0_for_loop_ranges,
+  input logic regfile2out_0_sched_gen_enable,
+  input logic [15:0] regfile2out_0_sched_gen_sched_addr_gen_starting_addr,
+  input logic [3:0] [15:0] regfile2out_0_sched_gen_sched_addr_gen_strides,
+  input logic [4:0] regfile2out_1_addr_gen_starting_addr,
+  input logic [3:0] [4:0] regfile2out_1_addr_gen_strides,
+  input logic [2:0] regfile2out_1_for_loop_dimensionality,
+  input logic [3:0] [15:0] regfile2out_1_for_loop_ranges,
+  input logic regfile2out_1_sched_gen_enable,
+  input logic [15:0] regfile2out_1_sched_gen_sched_addr_gen_starting_addr,
+  input logic [3:0] [15:0] regfile2out_1_sched_gen_sched_addr_gen_strides,
+  input logic rst_n,
+  output logic [1:0] accessor_output,
+  output logic [1:0] [15:0] data_out,
+  output logic [15:0] data_to_strg,
+  output logic [4:0] rd_addr_out,
+  output logic ren_to_strg,
+  output logic [4:0] tmp0_rdaddr,
+  output logic tmp0_rden,
+  output logic [1:0] valid_out,
+  output logic wen_to_strg,
+  output logic [4:0] wr_addr_out
+);
+
+logic [15:0] cycle_count;
+logic [1:0][15:0] data_in_thin;
+logic [1:0][15:0] data_out_int;
+logic [1:0][15:0] data_out_int_thin;
+logic [4:0] in2regfile_0_addr_gen_addr_out;
+logic [1:0] in2regfile_0_for_loop_mux_sel_out;
+logic in2regfile_0_for_loop_restart;
+logic in2regfile_0_sched_gen_valid_output;
+logic [4:0] in2regfile_1_addr_gen_addr_out;
+logic [1:0] in2regfile_1_for_loop_mux_sel_out;
+logic in2regfile_1_for_loop_restart;
+logic in2regfile_1_sched_gen_valid_output;
+logic [1:0] read;
+logic [4:0] read_addr [1:0];
+logic read_pri_enc;
+logic [4:0] regfile2out_0_addr_gen_addr_out;
+logic [1:0] regfile2out_0_for_loop_mux_sel_out;
+logic regfile2out_0_for_loop_restart;
+logic regfile2out_0_sched_gen_valid_output;
+logic [4:0] regfile2out_1_addr_gen_addr_out;
+logic [1:0] regfile2out_1_for_loop_mux_sel_out;
+logic regfile2out_1_for_loop_restart;
+logic regfile2out_1_sched_gen_valid_output;
+logic [1:0] valid_out_int;
+logic [1:0] write;
+logic [4:0] write_addr [1:0];
+logic write_pri_enc;
+assign data_in_thin[0] = data_in[0][15:0];
+assign data_in_thin[1] = data_in[1][15:0];
+
+always_ff @(posedge clk, negedge rst_n) begin
+  if (~rst_n) begin
+    cycle_count <= 16'h0;
+  end
+  else if (clk_en) begin
+    if (flush) begin
+      cycle_count <= 16'h0;
+    end
+    else cycle_count <= cycle_count + 16'h1;
+  end
+end
+assign accessor_output = read;
+assign valid_out_int = read;
+assign data_out_int_thin = data_out_int;
+assign data_out[0][15:0] = data_out_int_thin[0];
+assign data_out[1][15:0] = data_out_int_thin[1];
+assign valid_out = valid_out_int;
+assign write[0] = in2regfile_0_sched_gen_valid_output;
+assign write_addr[0] = in2regfile_0_addr_gen_addr_out;
+assign write[1] = in2regfile_1_sched_gen_valid_output;
+assign write_addr[1] = in2regfile_1_addr_gen_addr_out;
+assign read[0] = regfile2out_0_sched_gen_valid_output;
+assign read_addr[0] = regfile2out_0_addr_gen_addr_out;
+assign read[1] = regfile2out_1_sched_gen_valid_output;
+assign read_addr[1] = regfile2out_1_addr_gen_addr_out;
+assign wen_to_strg = |write;
+assign ren_to_strg = |read;
+assign data_out_int[0] = data_from_strg;
+assign data_out_int[1] = data_from_strg;
+always_comb begin
+  if (write[0]) begin
+    write_pri_enc = 1'h0;
+  end
+  else if (write[1]) begin
+    write_pri_enc = 1'h1;
+  end
+  else write_pri_enc = 1'h0;
+end
+assign wr_addr_out = write_addr[write_pri_enc][4:0];
+assign data_to_strg = data_in_thin[write_pri_enc];
+always_comb begin
+  if (read[0]) begin
+    read_pri_enc = 1'h0;
+  end
+  else if (read[1]) begin
+    read_pri_enc = 1'h1;
+  end
+  else read_pri_enc = 1'h0;
+end
+assign rd_addr_out = read_addr[read_pri_enc][4:0];
+assign tmp0_rdaddr = 5'h0;
+assign tmp0_rden = 1'h0;
+for_loop_4_16 in2regfile_0_for_loop (
+  .clk(clk),
+  .clk_en(clk_en),
+  .dimensionality(in2regfile_0_for_loop_dimensionality),
+  .flush(flush),
+  .ranges(in2regfile_0_for_loop_ranges),
+  .rst_n(rst_n),
+  .step(write[0]),
+  .mux_sel_out(in2regfile_0_for_loop_mux_sel_out),
+  .restart(in2regfile_0_for_loop_restart)
+);
+
+addr_gen_4_5 in2regfile_0_addr_gen (
+  .clk(clk),
+  .clk_en(clk_en),
+  .flush(flush),
+  .mux_sel(in2regfile_0_for_loop_mux_sel_out),
+  .restart(in2regfile_0_for_loop_restart),
+  .rst_n(rst_n),
+  .starting_addr(in2regfile_0_addr_gen_starting_addr),
+  .step(write[0]),
+  .strides(in2regfile_0_addr_gen_strides),
+  .addr_out(in2regfile_0_addr_gen_addr_out)
+);
+
+sched_gen_4_16 in2regfile_0_sched_gen (
+  .clk(clk),
+  .clk_en(clk_en),
+  .cycle_count(cycle_count),
+  .enable(in2regfile_0_sched_gen_enable),
+  .finished(in2regfile_0_for_loop_restart),
+  .flush(flush),
+  .mux_sel(in2regfile_0_for_loop_mux_sel_out),
+  .rst_n(rst_n),
+  .sched_addr_gen_starting_addr(in2regfile_0_sched_gen_sched_addr_gen_starting_addr),
+  .sched_addr_gen_strides(in2regfile_0_sched_gen_sched_addr_gen_strides),
+  .valid_output(in2regfile_0_sched_gen_valid_output)
+);
+
+for_loop_4_16 in2regfile_1_for_loop (
+  .clk(clk),
+  .clk_en(clk_en),
+  .dimensionality(in2regfile_1_for_loop_dimensionality),
+  .flush(flush),
+  .ranges(in2regfile_1_for_loop_ranges),
+  .rst_n(rst_n),
+  .step(write[1]),
+  .mux_sel_out(in2regfile_1_for_loop_mux_sel_out),
+  .restart(in2regfile_1_for_loop_restart)
+);
+
+addr_gen_4_5 in2regfile_1_addr_gen (
+  .clk(clk),
+  .clk_en(clk_en),
+  .flush(flush),
+  .mux_sel(in2regfile_1_for_loop_mux_sel_out),
+  .restart(in2regfile_1_for_loop_restart),
+  .rst_n(rst_n),
+  .starting_addr(in2regfile_1_addr_gen_starting_addr),
+  .step(write[1]),
+  .strides(in2regfile_1_addr_gen_strides),
+  .addr_out(in2regfile_1_addr_gen_addr_out)
+);
+
+sched_gen_4_16 in2regfile_1_sched_gen (
+  .clk(clk),
+  .clk_en(clk_en),
+  .cycle_count(cycle_count),
+  .enable(in2regfile_1_sched_gen_enable),
+  .finished(in2regfile_1_for_loop_restart),
+  .flush(flush),
+  .mux_sel(in2regfile_1_for_loop_mux_sel_out),
+  .rst_n(rst_n),
+  .sched_addr_gen_starting_addr(in2regfile_1_sched_gen_sched_addr_gen_starting_addr),
+  .sched_addr_gen_strides(in2regfile_1_sched_gen_sched_addr_gen_strides),
+  .valid_output(in2regfile_1_sched_gen_valid_output)
+);
+
+for_loop_4_16 regfile2out_0_for_loop (
+  .clk(clk),
+  .clk_en(clk_en),
+  .dimensionality(regfile2out_0_for_loop_dimensionality),
+  .flush(flush),
+  .ranges(regfile2out_0_for_loop_ranges),
+  .rst_n(rst_n),
+  .step(read[0]),
+  .mux_sel_out(regfile2out_0_for_loop_mux_sel_out),
+  .restart(regfile2out_0_for_loop_restart)
+);
+
+addr_gen_4_5 regfile2out_0_addr_gen (
+  .clk(clk),
+  .clk_en(clk_en),
+  .flush(flush),
+  .mux_sel(regfile2out_0_for_loop_mux_sel_out),
+  .restart(regfile2out_0_for_loop_restart),
+  .rst_n(rst_n),
+  .starting_addr(regfile2out_0_addr_gen_starting_addr),
+  .step(read[0]),
+  .strides(regfile2out_0_addr_gen_strides),
+  .addr_out(regfile2out_0_addr_gen_addr_out)
+);
+
+sched_gen_4_16 regfile2out_0_sched_gen (
+  .clk(clk),
+  .clk_en(clk_en),
+  .cycle_count(cycle_count),
+  .enable(regfile2out_0_sched_gen_enable),
+  .finished(regfile2out_0_for_loop_restart),
+  .flush(flush),
+  .mux_sel(regfile2out_0_for_loop_mux_sel_out),
+  .rst_n(rst_n),
+  .sched_addr_gen_starting_addr(regfile2out_0_sched_gen_sched_addr_gen_starting_addr),
+  .sched_addr_gen_strides(regfile2out_0_sched_gen_sched_addr_gen_strides),
+  .valid_output(regfile2out_0_sched_gen_valid_output)
+);
+
+for_loop_4_16 regfile2out_1_for_loop (
+  .clk(clk),
+  .clk_en(clk_en),
+  .dimensionality(regfile2out_1_for_loop_dimensionality),
+  .flush(flush),
+  .ranges(regfile2out_1_for_loop_ranges),
+  .rst_n(rst_n),
+  .step(read[1]),
+  .mux_sel_out(regfile2out_1_for_loop_mux_sel_out),
+  .restart(regfile2out_1_for_loop_restart)
+);
+
+addr_gen_4_5 regfile2out_1_addr_gen (
+  .clk(clk),
+  .clk_en(clk_en),
+  .flush(flush),
+  .mux_sel(regfile2out_1_for_loop_mux_sel_out),
+  .restart(regfile2out_1_for_loop_restart),
+  .rst_n(rst_n),
+  .starting_addr(regfile2out_1_addr_gen_starting_addr),
+  .step(read[1]),
+  .strides(regfile2out_1_addr_gen_strides),
+  .addr_out(regfile2out_1_addr_gen_addr_out)
+);
+
+sched_gen_4_16 regfile2out_1_sched_gen (
+  .clk(clk),
+  .clk_en(clk_en),
+  .cycle_count(cycle_count),
+  .enable(regfile2out_1_sched_gen_enable),
+  .finished(regfile2out_1_for_loop_restart),
+  .flush(flush),
+  .mux_sel(regfile2out_1_for_loop_mux_sel_out),
+  .rst_n(rst_n),
+  .sched_addr_gen_starting_addr(regfile2out_1_sched_gen_sched_addr_gen_starting_addr),
+  .sched_addr_gen_strides(regfile2out_1_sched_gen_sched_addr_gen_strides),
+  .valid_output(regfile2out_1_sched_gen_valid_output)
+);
+
+endmodule   // strg_ub_thin
+
+module strg_ub_thin_flat (
+  input logic clk,
+  input logic clk_en,
+  input logic [15:0] data_from_strg_lifted,
+  input logic [0:0] [15:0] data_in_f_0,
+  input logic [0:0] [15:0] data_in_f_1,
+  input logic flush,
+  input logic rst_n,
+  input logic [4:0] strg_ub_thin_inst_in2regfile_0_addr_gen_starting_addr,
+  input logic [3:0] [4:0] strg_ub_thin_inst_in2regfile_0_addr_gen_strides,
+  input logic [2:0] strg_ub_thin_inst_in2regfile_0_for_loop_dimensionality,
+  input logic [3:0] [15:0] strg_ub_thin_inst_in2regfile_0_for_loop_ranges,
+  input logic strg_ub_thin_inst_in2regfile_0_sched_gen_enable,
+  input logic [15:0] strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_starting_addr,
+  input logic [3:0] [15:0] strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides,
+  input logic [4:0] strg_ub_thin_inst_in2regfile_1_addr_gen_starting_addr,
+  input logic [3:0] [4:0] strg_ub_thin_inst_in2regfile_1_addr_gen_strides,
+  input logic [2:0] strg_ub_thin_inst_in2regfile_1_for_loop_dimensionality,
+  input logic [3:0] [15:0] strg_ub_thin_inst_in2regfile_1_for_loop_ranges,
+  input logic strg_ub_thin_inst_in2regfile_1_sched_gen_enable,
+  input logic [15:0] strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_starting_addr,
+  input logic [3:0] [15:0] strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides,
+  input logic [4:0] strg_ub_thin_inst_regfile2out_0_addr_gen_starting_addr,
+  input logic [3:0] [4:0] strg_ub_thin_inst_regfile2out_0_addr_gen_strides,
+  input logic [2:0] strg_ub_thin_inst_regfile2out_0_for_loop_dimensionality,
+  input logic [3:0] [15:0] strg_ub_thin_inst_regfile2out_0_for_loop_ranges,
+  input logic strg_ub_thin_inst_regfile2out_0_sched_gen_enable,
+  input logic [15:0] strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_starting_addr,
+  input logic [3:0] [15:0] strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides,
+  input logic [4:0] strg_ub_thin_inst_regfile2out_1_addr_gen_starting_addr,
+  input logic [3:0] [4:0] strg_ub_thin_inst_regfile2out_1_addr_gen_strides,
+  input logic [2:0] strg_ub_thin_inst_regfile2out_1_for_loop_dimensionality,
+  input logic [3:0] [15:0] strg_ub_thin_inst_regfile2out_1_for_loop_ranges,
+  input logic strg_ub_thin_inst_regfile2out_1_sched_gen_enable,
+  input logic [15:0] strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_starting_addr,
+  input logic [3:0] [15:0] strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides,
+  output logic accessor_output_f_b_0,
+  output logic accessor_output_f_b_1,
+  output logic [0:0] [15:0] data_out_f_0,
+  output logic [0:0] [15:0] data_out_f_1,
+  output logic [15:0] data_to_strg_lifted,
+  output logic [4:0] rd_addr_out_lifted,
+  output logic ren_to_strg_lifted,
+  output logic [4:0] tmp0_rdaddr_lifted,
+  output logic tmp0_rden_lifted,
+  output logic valid_out_f_b_0,
+  output logic valid_out_f_b_1,
+  output logic wen_to_strg_lifted,
+  output logic [4:0] wr_addr_out_lifted
+);
+
+logic [1:0] strg_ub_thin_inst_accessor_output;
+logic [1:0][15:0] strg_ub_thin_inst_data_in;
+logic [1:0][15:0] strg_ub_thin_inst_data_out;
+logic [1:0] strg_ub_thin_inst_valid_out;
+assign strg_ub_thin_inst_data_in[0] = data_in_f_0;
+assign strg_ub_thin_inst_data_in[1] = data_in_f_1;
+assign accessor_output_f_b_0 = strg_ub_thin_inst_accessor_output[0];
+assign accessor_output_f_b_1 = strg_ub_thin_inst_accessor_output[1];
+assign valid_out_f_b_0 = strg_ub_thin_inst_valid_out[0];
+assign valid_out_f_b_1 = strg_ub_thin_inst_valid_out[1];
+assign data_out_f_0 = strg_ub_thin_inst_data_out[0];
+assign data_out_f_1 = strg_ub_thin_inst_data_out[1];
+strg_ub_thin strg_ub_thin_inst (
+  .clk(clk),
+  .clk_en(clk_en),
+  .data_from_strg(data_from_strg_lifted),
+  .data_in(strg_ub_thin_inst_data_in),
+  .flush(flush),
+  .in2regfile_0_addr_gen_starting_addr(strg_ub_thin_inst_in2regfile_0_addr_gen_starting_addr),
+  .in2regfile_0_addr_gen_strides(strg_ub_thin_inst_in2regfile_0_addr_gen_strides),
+  .in2regfile_0_for_loop_dimensionality(strg_ub_thin_inst_in2regfile_0_for_loop_dimensionality),
+  .in2regfile_0_for_loop_ranges(strg_ub_thin_inst_in2regfile_0_for_loop_ranges),
+  .in2regfile_0_sched_gen_enable(strg_ub_thin_inst_in2regfile_0_sched_gen_enable),
+  .in2regfile_0_sched_gen_sched_addr_gen_starting_addr(strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_starting_addr),
+  .in2regfile_0_sched_gen_sched_addr_gen_strides(strg_ub_thin_inst_in2regfile_0_sched_gen_sched_addr_gen_strides),
+  .in2regfile_1_addr_gen_starting_addr(strg_ub_thin_inst_in2regfile_1_addr_gen_starting_addr),
+  .in2regfile_1_addr_gen_strides(strg_ub_thin_inst_in2regfile_1_addr_gen_strides),
+  .in2regfile_1_for_loop_dimensionality(strg_ub_thin_inst_in2regfile_1_for_loop_dimensionality),
+  .in2regfile_1_for_loop_ranges(strg_ub_thin_inst_in2regfile_1_for_loop_ranges),
+  .in2regfile_1_sched_gen_enable(strg_ub_thin_inst_in2regfile_1_sched_gen_enable),
+  .in2regfile_1_sched_gen_sched_addr_gen_starting_addr(strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_starting_addr),
+  .in2regfile_1_sched_gen_sched_addr_gen_strides(strg_ub_thin_inst_in2regfile_1_sched_gen_sched_addr_gen_strides),
+  .regfile2out_0_addr_gen_starting_addr(strg_ub_thin_inst_regfile2out_0_addr_gen_starting_addr),
+  .regfile2out_0_addr_gen_strides(strg_ub_thin_inst_regfile2out_0_addr_gen_strides),
+  .regfile2out_0_for_loop_dimensionality(strg_ub_thin_inst_regfile2out_0_for_loop_dimensionality),
+  .regfile2out_0_for_loop_ranges(strg_ub_thin_inst_regfile2out_0_for_loop_ranges),
+  .regfile2out_0_sched_gen_enable(strg_ub_thin_inst_regfile2out_0_sched_gen_enable),
+  .regfile2out_0_sched_gen_sched_addr_gen_starting_addr(strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_starting_addr),
+  .regfile2out_0_sched_gen_sched_addr_gen_strides(strg_ub_thin_inst_regfile2out_0_sched_gen_sched_addr_gen_strides),
+  .regfile2out_1_addr_gen_starting_addr(strg_ub_thin_inst_regfile2out_1_addr_gen_starting_addr),
+  .regfile2out_1_addr_gen_strides(strg_ub_thin_inst_regfile2out_1_addr_gen_strides),
+  .regfile2out_1_for_loop_dimensionality(strg_ub_thin_inst_regfile2out_1_for_loop_dimensionality),
+  .regfile2out_1_for_loop_ranges(strg_ub_thin_inst_regfile2out_1_for_loop_ranges),
+  .regfile2out_1_sched_gen_enable(strg_ub_thin_inst_regfile2out_1_sched_gen_enable),
+  .regfile2out_1_sched_gen_sched_addr_gen_starting_addr(strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_starting_addr),
+  .regfile2out_1_sched_gen_sched_addr_gen_strides(strg_ub_thin_inst_regfile2out_1_sched_gen_sched_addr_gen_strides),
+  .rst_n(rst_n),
+  .accessor_output(strg_ub_thin_inst_accessor_output),
+  .data_out(strg_ub_thin_inst_data_out),
+  .data_to_strg(data_to_strg_lifted),
+  .rd_addr_out(rd_addr_out_lifted),
+  .ren_to_strg(ren_to_strg_lifted),
+  .tmp0_rdaddr(tmp0_rdaddr_lifted),
+  .tmp0_rden(tmp0_rden_lifted),
+  .valid_out(strg_ub_thin_inst_valid_out),
+  .wen_to_strg(wen_to_strg_lifted),
+  .wr_addr_out(wr_addr_out_lifted)
+);
+
+endmodule   // strg_ub_thin_flat
+

@@ -1,0 +1,23 @@
+Block Name			X	Y		#Block ID
+---------------------------
+io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0		1	0		#I0
+io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0$reg7		8	1		#r19
+io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0		3	0		#I3
+io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg0		0	1		#r4
+io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg1		0	5		#r5
+io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg2		2	5		#r6
+io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg3		2	3		#r7
+io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg4		8	3		#r8
+io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg5		6	3		#r9
+io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg6		4	5		#r10
+io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid		3	0		#i1
+io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid$reg8		4	3		#r20
+op_hcompute_hw_output_stencil$inner_compute$bitand_278_280_281_tree$_join_i2147_i1423		1	4		#p17
+op_hcompute_hw_output_stencil$inner_compute$bitand_278_280_281_tree$opN_0$_join_i2141_i1423		1	2		#p13
+op_hcompute_hw_output_stencil$inner_compute$bitand_278_280_281_tree$opN_1$_join_i2146_i1423		5	4		#p16
+op_hcompute_hw_output_stencil$inner_compute$mux_281_282_283_i2148_i1269		9	4		#p18
+op_hcompute_hw_output_stencil$inner_compute$sle_279_hw_input_global_wrapper_stencil_1_280_i2145_i1888		3	4		#p15
+op_hcompute_hw_output_stencil$inner_compute$sle_hw_input_global_wrapper_stencil_1_276_277_i2143_i1888		5	2		#p14
+op_hcompute_hw_output_stencil$inner_compute$slt_273_hw_input_global_wrapper_stencil_1_274_i2140_i637		9	2		#p12
+op_hcompute_hw_output_stencil$inner_compute$slt_hw_input_global_wrapper_stencil_1_271_272_i2138_i637		3	2		#p11
+op_hcompute_hw_output_stencil_port_controller_garnet		7	4		#m2

@@ -1,0 +1,58 @@
+Netlists:
+e1: (r17, reg)	(I0, f2io_16)
+e2: (r18, reg)	(i1, f2io_1)
+e3: (r11, reg)	(p2, data0)
+e4: (p2, res)	(r3, reg)	(m5, input_width_16_num_2)	(p13, data2)
+e6: (m5, output_width_16_num_0)	(r4, reg)	(p13, data1)
+e12: (I7, io2f_16)	(r8, reg)
+e14: (r8, reg)	(r9, reg)
+e15: (r9, reg)	(r10, reg)
+e16: (r10, reg)	(r11, reg)
+e17: (r4, reg)	(p14, data0)
+e18: (p12, res)	(p14, data1)
+e20: (p13, res)	(p14, data2)
+e22: (p14, res)	(p15, data1)
+e24: (r3, reg)	(p15, data2)
+e25: (p15, res)	(p16, data0)
+e27: (p16, res)	(r17, reg)
+e33: (m6, output_width_1_num_3)	(r18, reg)
+
+ID to Names:
+I0: io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0
+i1: io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid
+p2: op_hcompute_brighten_stencil$inner_compute$mul_hw_input_global_wrapper_stencil_1_259_260_i2153_i1461
+r3: brighten_stencil$d_reg__U1$reg0
+r4: brighten_stencil$d_reg__U2$reg0
+m5: brighten_stencil$ub_brighten_stencil_BANK_0_garnet
+m6: op_hcompute_hw_output_stencil_port_controller_garnet
+I7: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0
+r8: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg0
+r9: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg1
+r10: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg2
+r11: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg3
+p12: op_hcompute_blur_stencil$inner_compute$i2132_i2133_i131
+p13: op_hcompute_blur_stencil_1$inner_compute$add_brighten_stencil_1_273_274_tree$opN_0$opN_1$_join_i2143_i1808
+p14: op_hcompute_blur_stencil_1$inner_compute$add_brighten_stencil_1_273_274_tree$opN_0$_join_i2144_i364
+p15: op_hcompute_blur_stencil_1$inner_compute$add_brighten_stencil_1_273_274_tree$_join_i2146_i1808
+p16: op_hcompute_hw_output_stencil$inner_compute$lshr_blur_stencil_2_288_289_i2163_i1730
+r17: io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0$reg4
+r18: io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid$reg5
+
+Netlist Bus:
+e1: 16
+e2: 1
+e3: 16
+e4: 16
+e6: 16
+e12: 16
+e14: 16
+e15: 16
+e16: 16
+e17: 16
+e18: 16
+e20: 16
+e22: 16
+e24: 16
+e25: 16
+e27: 16
+e33: 1

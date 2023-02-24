@@ -1,0 +1,94 @@
+{
+  "IOs": {
+    "inputs": [
+      {
+        "bitwidth": 16,
+        "datafile": "hw_input_stencil.raw",
+        "name": "hw_input_stencil",
+        "shape": [
+          64,
+          64
+        ],
+        "io_tiles": [
+          {
+            "name": "io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0",
+            "addr": {
+              "cycle_starting_addr": [
+                10915
+              ],
+              "cycle_stride": [
+                1,
+                184
+              ],
+              "dimensionality": 2,
+              "extent": [
+                64,
+                64
+              ],
+              "read_data_starting_addr": [
+                0
+              ],
+              "read_data_stride": [
+                1,
+                64
+              ]
+            },
+            "x_pos": 0,
+            "y_pos": 0
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "bitwidth": 16,
+        "datafile": "hw_output.raw",
+        "name": "hw_output_stencil",
+        "shape": [
+          62,
+          62
+        ],
+        "io_tiles": [
+          {
+            "name": "io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0",
+            "addr": {
+              "cycle_starting_addr": [
+                22588
+              ],
+              "cycle_stride": [
+                1,
+                184
+              ],
+              "dimensionality": 2,
+              "extent": [
+                62,
+                62
+              ],
+              "write_data_starting_addr": [
+                0
+              ],
+              "write_data_stride": [
+                1,
+                62
+              ]
+            },
+            "x_pos": 1,
+            "y_pos": 0,
+            "valid_name": "hw_output_stencil"
+          }
+        ]
+      }
+    ]
+  },
+  "testing": {
+    "interleaved_input": [
+      "input.pgm"
+    ],
+    "interleaved_output": [
+      "gold.pgm"
+    ],
+    "bitstream": "mem_unbuffered.bs",
+    "coreir": "design_top.json",
+    "placement": "design.place"
+  }
+}

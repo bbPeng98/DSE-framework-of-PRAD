@@ -1,0 +1,60 @@
+#include "clockwork_testscript.h"
+#include "unoptimized_harris_color.h"
+#include "hw_classes.h"
+#include <fstream>
+#include <vector>
+
+void run_clockwork_program(RDAI_MemObject **mem_object_list) {
+	// input and output memory objects
+	int32_t _329 = ((int32_t*) mem_object_list[0]->host_ptr)[0];
+	int16_t *hw_input_stencil = (int16_t*) mem_object_list[1]->host_ptr;
+	int32_t hw_output_global_wrapper_s0_x_xo = ((int32_t*) mem_object_list[2]->host_ptr)[0];
+	int16_t *hw_output_global_wrapper_stencil = (int16_t*) mem_object_list[3]->host_ptr;
+
+	// input and output stream declarations
+	HWStream< hw_uint<16> > hw_input_stencil_stream;
+	HWStream< hw_uint<16> > hw_output_global_wrapper_stencil_stream;
+	int idx = 0;
+
+	// provision input stream hw_input_stencil_stream
+	std::vector<int16_t> hw_input_stencil_stream_tile(3*128*261);   idx=0;
+	for (int l2 = _329; l2 < (_329 + 261); l2++) {
+	for (int l1 = (hw_output_global_wrapper_s0_x_xo*122); l1 < ((hw_output_global_wrapper_s0_x_xo*122) + 128); l1++) {
+	for (int l0 = 0; l0 < 3; l0++) {
+		hw_uint<16> in_val;
+		set_at<0, 16, 16>(in_val, hw_uint<16>(hw_input_stencil[((l2*3312) + ((l1*3) + l0))]));
+		hw_input_stencil_stream.write(in_val);
+		hw_input_stencil_stream_tile[idx] = hw_input_stencil[((l2*3312) + ((l1*3) + l0))];  idx += 1;
+	} } } 
+	ofstream hw_input_stencil_file("bin/hw_input_stencil.leraw", ios::binary);
+	hw_input_stencil_file.write(reinterpret_cast<const char *>(hw_input_stencil_stream_tile.data()),
+		sizeof(hw_input_stencil_stream_tile[0]) * 3 * 128 * 261);
+	hw_input_stencil_file.close();
+
+
+	// invoke clockwork program
+	unoptimized_harris_color(
+		hw_input_stencil_stream,
+		hw_output_global_wrapper_stencil_stream
+	);
+
+	// provision output buffer
+	std::vector<int16_t> hw_output_global_wrapper_stencil_stream_tile(122*255);   idx=0;
+	for (int l1 = _329; l1 < (_329 + 255); l1++) {
+	for (int l0 = (hw_output_global_wrapper_s0_x_xo*122); l0 < ((hw_output_global_wrapper_s0_x_xo*122) + 122); l0++) {
+		hw_uint<16> actual = hw_output_global_wrapper_stencil_stream.read();
+		int actual_lane = actual.extract<0, 15>();
+		hw_output_global_wrapper_stencil[((l1*610) + l0)] = (int16_t)(actual_lane);
+		hw_output_global_wrapper_stencil_stream_tile[idx] = hw_output_global_wrapper_stencil[((l1*610) + l0)];  idx += 1;
+	} } 
+	ofstream hw_output_file("bin/hw_output.leraw", ios::binary);
+	hw_output_file.write(reinterpret_cast<const char *>(hw_output_global_wrapper_stencil_stream_tile.data()),
+		sizeof(hw_output_global_wrapper_stencil_stream_tile[0]) * 122 * 255);
+	hw_output_file.close();
+	ofstream hw_output_header_file("bin/hw_output_header.txt", ios::binary);
+	hw_output_header_file << "P5" << std::endl;
+	hw_output_header_file << "122 255" << std::endl;
+	hw_output_header_file << "65535" << std::endl;
+	hw_output_header_file.close();
+}
+

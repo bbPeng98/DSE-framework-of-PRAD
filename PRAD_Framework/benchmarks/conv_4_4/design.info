@@ -1,0 +1,2 @@
+layout=/home/ssy/AHA_GIB/benchmarks/conv_4_4/design.layout
+graph=1 /home/ssy/AHA_GIB/benchmarks/conv_4_4/1bit.graph 16 /home/ssy/AHA_GIB/benchmarks/conv_4_4/16bit.graph

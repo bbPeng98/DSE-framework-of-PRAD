@@ -1,0 +1,813 @@
+id to instance name
+  I0  io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0
+  i1  io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid
+  r2  hw_input_global_wrapper_stencil$d_reg__U10$reg0
+  r3  hw_input_global_wrapper_stencil$d_reg__U11$reg0
+  r4  hw_input_global_wrapper_stencil$d_reg__U12$reg0
+  r5  hw_input_global_wrapper_stencil$d_reg__U13$reg0
+  r6  hw_input_global_wrapper_stencil$d_reg__U14$reg0
+  r7  hw_input_global_wrapper_stencil$d_reg__U15$reg0
+  r8  hw_input_global_wrapper_stencil$d_reg__U16$reg0
+  r9  hw_input_global_wrapper_stencil$d_reg__U17$reg0
+  r10  hw_input_global_wrapper_stencil$d_reg__U18$reg0
+  r11  hw_input_global_wrapper_stencil$d_reg__U19$reg0
+  r12  hw_input_global_wrapper_stencil$d_reg__U20$reg0
+  r13  hw_input_global_wrapper_stencil$d_reg__U21$reg0
+  r14  hw_input_global_wrapper_stencil$d_reg__U22$reg0
+  r15  hw_input_global_wrapper_stencil$d_reg__U23$reg0
+  r16  hw_input_global_wrapper_stencil$d_reg__U24$reg0
+  r17  hw_input_global_wrapper_stencil$d_reg__U25$reg0
+  r18  hw_input_global_wrapper_stencil$d_reg__U26$reg0
+  r19  hw_input_global_wrapper_stencil$d_reg__U27$reg0
+  r20  hw_input_global_wrapper_stencil$d_reg__U28$reg0
+  r21  hw_input_global_wrapper_stencil$d_reg__U29$reg0
+  r22  hw_input_global_wrapper_stencil$d_reg__U3$reg0
+  r23  hw_input_global_wrapper_stencil$d_reg__U30$reg0
+  r24  hw_input_global_wrapper_stencil$d_reg__U31$reg0
+  r25  hw_input_global_wrapper_stencil$d_reg__U32$reg0
+  r26  hw_input_global_wrapper_stencil$d_reg__U33$reg0
+  r27  hw_input_global_wrapper_stencil$d_reg__U34$reg0
+  r28  hw_input_global_wrapper_stencil$d_reg__U35$reg0
+  r29  hw_input_global_wrapper_stencil$d_reg__U36$reg0
+  r30  hw_input_global_wrapper_stencil$d_reg__U37$reg0
+  r31  hw_input_global_wrapper_stencil$d_reg__U38$reg0
+  r32  hw_input_global_wrapper_stencil$d_reg__U39$reg0
+  r33  hw_input_global_wrapper_stencil$d_reg__U4$reg0
+  r34  hw_input_global_wrapper_stencil$d_reg__U40$reg0
+  r35  hw_input_global_wrapper_stencil$d_reg__U41$reg0
+  r36  hw_input_global_wrapper_stencil$d_reg__U42$reg0
+  r37  hw_input_global_wrapper_stencil$d_reg__U43$reg0
+  r38  hw_input_global_wrapper_stencil$d_reg__U44$reg0
+  r39  hw_input_global_wrapper_stencil$d_reg__U5$reg0
+  r40  hw_input_global_wrapper_stencil$d_reg__U6$reg0
+  r41  hw_input_global_wrapper_stencil$d_reg__U7$reg0
+  r42  hw_input_global_wrapper_stencil$d_reg__U8$reg0
+  r43  hw_input_global_wrapper_stencil$d_reg__U9$reg0
+  m44  hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_bank_6_garnet
+  m45  hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_bank_7_garnet
+  m46  hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_bank_8_garnet
+  m47  op_hcompute_hw_output_stencil_port_controller_garnet
+  I48  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0
+  r49  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg0
+  r50  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg1
+  r51  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg2
+  r52  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg3
+  r53  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg4
+  r54  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg5
+  r55  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg6
+  r56  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg7
+  r57  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg8
+  r58  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg9
+  p59  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_46_458_477_i2785_i1096
+  p60  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$opN_0$opN_1$opN_1$opN_1$_join_i2789_i412
+  p61  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_44_432_475_i2778_i1096
+  p62  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$opN_0$opN_1$opN_1$opN_0$_join_i2782_i412
+  p63  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$opN_0$opN_1$opN_1$_join_i2790_i2231
+  p64  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_40_467_468_i2763_i1096
+  p65  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$opN_0$opN_1$opN_0$opN_0$_join_i2767_i412
+  p66  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_42_471_472_i2770_i1096
+  p67  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$opN_0$opN_1$opN_0$opN_1$_join_i2774_i412
+  p68  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$opN_0$opN_1$_join_i2791_i1176
+  p69  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_38_444_465_i2754_i1096
+  p70  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$opN_0$opN_0$opN_1$opN_1$_join_i2758_i412
+  p71  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_36_462_463_i2747_i1096
+  p72  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$opN_0$opN_0$opN_1$opN_0$_join_i2751_i412
+  p73  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$opN_0$opN_0$opN_1$_join_i2759_i2231
+  p74  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_32_454_455_i2732_i1096
+  p75  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$opN_0$opN_0$opN_0$opN_0$_join_i2736_i412
+  p76  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_34_458_459_i2739_i1096
+  p77  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$opN_0$opN_0$opN_0$opN_1$_join_i2743_i412
+  p78  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$opN_0$opN_0$_join_i2760_i1176
+  p79  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$opN_0$_join_i2792_i2231
+  p80  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_1$_join_i2796_i412
+  p81  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_30_428_452_i2721_i1096
+  p82  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_1$opN_1$opN_1$opN_1$_join_i2725_i412
+  p83  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_28_448_449_i2714_i1096
+  p84  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_1$opN_1$opN_1$opN_0$_join_i2718_i412
+  p85  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_1$opN_1$opN_1$_join_i2726_i2231
+  p86  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_24_440_441_i2699_i1096
+  p87  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_1$opN_1$opN_0$opN_0$_join_i2703_i412
+  p88  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_26_444_445_i2706_i1096
+  p89  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_1$opN_1$opN_0$opN_1$_join_i2710_i412
+  p90  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_1$opN_1$_join_i2727_i1176
+  p91  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_22_436_437_i2690_i1096
+  p92  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_1$opN_0$opN_1$opN_1$_join_i2694_i412
+  p93  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_20_432_433_i2683_i1096
+  p94  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_1$opN_0$opN_1$opN_0$_join_i2687_i412
+  p95  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_1$opN_0$opN_1$_join_i2695_i2231
+  p96  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_16_424_425_i2668_i1096
+  p97  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_1$opN_0$opN_0$opN_0$_join_i2672_i412
+  p98  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_18_428_429_i2675_i1096
+  p99  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_1$opN_0$opN_0$opN_1$_join_i2679_i412
+  p100  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_1$opN_0$_join_i2696_i1176
+  p101  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_1$_join_i2728_i2231
+  p102  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_6_404_405_i2627_i1096
+  p103  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_0$opN_0$opN_1$opN_1$_join_i2631_i412
+  p104  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_4_400_401_i2620_i1096
+  p105  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_0$opN_0$opN_1$opN_0$_join_i2624_i412
+  p106  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_0$opN_0$opN_1$_join_i2632_i2231
+  p107  op_hcompute_conv_stencil$inner_compute$i2599_i2600_i651
+  p108  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_0$opN_0$opN_0$opN_0$_join_i2609_i1905
+  p109  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_2_396_397_i2612_i1096
+  p110  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_0$opN_0$opN_0$opN_1$_join_i2616_i412
+  p111  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_0$opN_0$_join_i2633_i1176
+  p112  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_14_420_421_i2658_i1096
+  p113  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_0$opN_1$opN_1$opN_1$_join_i2662_i412
+  p114  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_12_416_417_i2651_i1096
+  p115  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_0$opN_1$opN_1$opN_0$_join_i2655_i412
+  p116  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_0$opN_1$opN_1$_join_i2663_i2231
+  p117  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_8_408_409_i2636_i1096
+  p118  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_0$opN_1$opN_0$opN_0$_join_i2640_i412
+  p119  op_hcompute_conv_stencil_1$inner_compute$mul_hw_input_global_wrapper_stencil_10_412_413_i2643_i1096
+  p120  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_0$opN_1$opN_0$opN_1$_join_i2647_i412
+  p121  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$opN_0$opN_1$_join_i2664_i1176
+  p122  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$opN_0$_join_i2729_i1176
+  p123  op_hcompute_conv_stencil_1$inner_compute$add_395_526_527_tree$_join_i2797_i2231
+  r124  io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0$reg10
+  r125  io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid$reg11
+id_to_Instrs
+  I0, 2
+  i1, 2
+  r2, 0
+  r3, 0
+  r4, 0
+  r5, 0
+  r6, 0
+  r7, 0
+  r8, 0
+  r9, 0
+  r10, 0
+  r11, 0
+  r12, 0
+  r13, 0
+  r14, 0
+  r15, 0
+  r16, 0
+  r17, 0
+  r18, 0
+  r19, 0
+  r20, 0
+  r21, 0
+  r22, 0
+  r23, 0
+  r24, 0
+  r25, 0
+  r26, 0
+  r27, 0
+  r28, 0
+  r29, 0
+  r30, 0
+  r31, 0
+  r32, 0
+  r33, 0
+  r34, 0
+  r35, 0
+  r36, 0
+  r37, 0
+  r38, 0
+  r39, 0
+  r40, 0
+  r41, 0
+  r42, 0
+  r43, 0
+  m44, <class 'peak.mapper.utils.Unbound'>
+  m45, <class 'peak.mapper.utils.Unbound'>
+  m46, <class 'peak.mapper.utils.Unbound'>
+  m47, <class 'peak.mapper.utils.Unbound'>
+  I48, 1
+  r49, 0
+  r50, 0
+  r51, 0
+  r52, 0
+  r53, 0
+  r54, 0
+  r55, 0
+  r56, 0
+  r57, 0
+  r58, 0
+  p59, 152297039773945649692748
+  p60, 151117745183547181236400
+  p61, 152297039762950533414988
+  p62, 151117745183547181236400
+  p63, 157286451574951303971008
+  p64, 152297039754154440392780
+  p65, 151117745192343274258608
+  p66, 152297039765149556670540
+  p67, 151117745176950111469744
+  p68, 28408274107282368233528
+  p69, 152297039745358347370572
+  p70, 151117745168154018447536
+  p71, 152297039738761277603916
+  p72, 151117745157158902169776
+  p73, 157286451574951303971008
+  p74, 152297039729965184581708
+  p75, 151117745168154018447536
+  p76, 152297039773945649692748
+  p77, 151117745159357925425328
+  p78, 28408274107282368233528
+  p79, 157286451574951303971008
+  p80, 151117745192343274258608
+  p81, 152297039718970068303948
+  p82, 151117745139566716125360
+  p83, 152297039721169091559500
+  p84, 151117745132969646358704
+  p85, 157286451574951303971008
+  p86, 152297039701377882259532
+  p87, 151117745139566716125360
+  p88, 152297039745358347370572
+  p89, 151117745183547181236400
+  p90, 28408274107282368233528
+  p91, 152297039694780812492876
+  p92, 151117745121974530080944
+  p93, 152297039762950533414988
+  p94, 151117745115377460314288
+  p95, 157286451574951303971008
+  p96, 152297039690382765981772
+  p97, 151117745113178437058736
+  p98, 152297039718970068303948
+  p99, 151117745157158902169776
+  p100, 28408274107282368233528
+  p101, 157286451574951303971008
+  p102, 152297039736562254348364
+  p103, 151117745174751088214192
+  p104, 152297039692581789237324
+  p105, 151117745130770623103152
+  p106, 157286451574951303971008
+  p107, 151115727451828647362752
+  p108, 151116600097923821731888
+  p109, 152297039679387649704012
+  p110, 151117745102183320780976
+  p111, 28408274107282368233528
+  p112, 152297039677188626448460
+  p113, 151117745099984297525424
+  p114, 152297039756353463648332
+  p115, 151117745194542297514160
+  p116, 157286451574951303971008
+  p117, 152297039674989603192908
+  p118, 151117745104382344036528
+  p119, 152297039712372998537292
+  p120, 151117745150561832403120
+  p121, 28408274107282368233528
+  p122, 28408274107282368233528
+  p123, 157286451574951303971008
+  r124, 0
+  r125, 0
+id_to_metadata
+  m44, {'ID': '_U0', 'config': {'agg2sram_0': {'agg_read_padding': [0], 'cycle_starting_addr': [4], 'cycle_stride': [4, 64], 'delay': [0], 'dimensionality': 2, 'extent': [16, 64], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 16]}, 'in2agg_0': {'cycle_starting_addr': [0], 'cycle_stride': [1, 64], 'dimensionality': 2, 'extent': [64, 64], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'sram2tb_0': {'cycle_starting_addr': [317], 'cycle_stride': [4, 64], 'dimensionality': 2, 'extent': [16, 64], 'read_data_starting_addr': [0], 'read_data_stride': [1, 16], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'sram2tb_1': {'cycle_starting_addr': [382], 'cycle_stride': [4, 64], 'dimensionality': 2, 'extent': [16, 64], 'read_data_starting_addr': [0], 'read_data_stride': [1, 16], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'tb2out_0': {'cycle_starting_addr': [320], 'cycle_stride': [1, 64], 'dimensionality': 2, 'extent': [64, 64], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0]}, 'tb2out_1': {'cycle_starting_addr': [384], 'cycle_stride': [1, 64], 'dimensionality': 2, 'extent': [64, 64], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 2, 'use_prebuilt_mem': True, 'width': 16}
+  m45, {'ID': '_U1', 'config': {'agg2sram_0': {'agg_read_padding': [0], 'cycle_starting_addr': [4], 'cycle_stride': [4, 64], 'delay': [0], 'dimensionality': 2, 'extent': [16, 64], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 16]}, 'in2agg_0': {'cycle_starting_addr': [0], 'cycle_stride': [1, 64], 'dimensionality': 2, 'extent': [64, 64], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'sram2tb_0': {'cycle_starting_addr': [254], 'cycle_stride': [4, 64], 'dimensionality': 2, 'extent': [16, 64], 'read_data_starting_addr': [0], 'read_data_stride': [1, 16], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'sram2tb_1': {'cycle_starting_addr': [189], 'cycle_stride': [4, 64], 'dimensionality': 2, 'extent': [16, 64], 'read_data_starting_addr': [0], 'read_data_stride': [1, 16], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'tb2out_0': {'cycle_starting_addr': [256], 'cycle_stride': [1, 64], 'dimensionality': 2, 'extent': [64, 64], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0]}, 'tb2out_1': {'cycle_starting_addr': [192], 'cycle_stride': [1, 64], 'dimensionality': 2, 'extent': [64, 64], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 2, 'use_prebuilt_mem': True, 'width': 16}
+  m46, {'ID': '_U2', 'config': {'agg2sram_0': {'agg_read_padding': [0], 'cycle_starting_addr': [4], 'cycle_stride': [4, 64], 'delay': [0], 'dimensionality': 2, 'extent': [16, 64], 'mode': [0], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0], 'write_data_starting_addr': [0], 'write_data_stride': [1, 16]}, 'in2agg_0': {'cycle_starting_addr': [0], 'cycle_stride': [1, 64], 'dimensionality': 2, 'extent': [64, 64], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'sram2tb_0': {'cycle_starting_addr': [126], 'cycle_stride': [4, 64], 'dimensionality': 2, 'extent': [16, 64], 'read_data_starting_addr': [0], 'read_data_stride': [1, 16], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'sram2tb_1': {'cycle_starting_addr': [61], 'cycle_stride': [4, 64], 'dimensionality': 2, 'extent': [16, 64], 'read_data_starting_addr': [0], 'read_data_stride': [1, 16], 'write_data_starting_addr': [0], 'write_data_stride': [1, 0]}, 'tb2out_0': {'cycle_starting_addr': [128], 'cycle_stride': [1, 64], 'dimensionality': 2, 'extent': [64, 64], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0]}, 'tb2out_1': {'cycle_starting_addr': [64], 'cycle_stride': [1, 64], 'dimensionality': 2, 'extent': [64, 64], 'read_data_starting_addr': [0], 'read_data_stride': [1, 0]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': False, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 2, 'use_prebuilt_mem': True, 'width': 16}
+  m47, {'ID': '_U45', 'config': {'stencil_valid': {'cycle_starting_addr': [390], 'cycle_stride': [1, 64], 'dimensionality': 2, 'extent': [58, 58]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': True, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+buses
+  e1, 16
+  e2, 1
+  e3, 16
+  e4, 16
+  e5, 16
+  e6, 16
+  e7, 16
+  e8, 16
+  e9, 16
+  e14, 16
+  e15, 16
+  e16, 16
+  e17, 16
+  e18, 16
+  e19, 16
+  e20, 16
+  e25, 16
+  e26, 16
+  e27, 16
+  e28, 16
+  e29, 16
+  e30, 16
+  e31, 16
+  e32, 16
+  e33, 16
+  e34, 16
+  e35, 16
+  e36, 16
+  e37, 16
+  e42, 16
+  e43, 16
+  e44, 16
+  e45, 16
+  e46, 16
+  e47, 16
+  e48, 16
+  e49, 16
+  e50, 16
+  e51, 16
+  e52, 16
+  e53, 16
+  e54, 16
+  e55, 16
+  e56, 16
+  e57, 16
+  e58, 16
+  e59, 16
+  e60, 16
+  e62, 16
+  e63, 16
+  e64, 16
+  e65, 16
+  e66, 16
+  e67, 16
+  e68, 16
+  e73, 16
+  e78, 16
+  e83, 16
+  e88, 16
+  e93, 16
+  e98, 16
+  e103, 16
+  e104, 16
+  e109, 16
+  e114, 16
+  e119, 16
+  e124, 16
+  e129, 16
+  e134, 16
+  e139, 16
+  e144, 16
+  e149, 16
+  e154, 16
+  e155, 16
+  e160, 16
+  e165, 16
+  e170, 16
+  e175, 16
+  e180, 16
+  e185, 16
+  e190, 16
+  e191, 16
+  e196, 16
+  e201, 16
+  e206, 16
+  e211, 16
+  e216, 16
+  e221, 16
+  e226, 16
+  e231, 16
+  e236, 16
+  e241, 16
+  e242, 16
+  e247, 16
+  e252, 16
+  e257, 16
+  e262, 16
+  e267, 16
+  e272, 16
+  e277, 16
+  e282, 16
+  e287, 16
+  e292, 16
+  e297, 16
+  e302, 16
+  e307, 16
+  e312, 16
+  e313, 16
+  e318, 16
+  e323, 16
+  e328, 16
+  e333, 16
+  e338, 16
+  e339, 16
+  e344, 16
+  e349, 16
+  e354, 16
+  e359, 16
+  e364, 16
+  e365, 16
+  e370, 16
+  e375, 16
+  e380, 16
+  e385, 16
+  e390, 16
+  e395, 16
+  e404, 1
+netlist
+  e1
+    ('r124', 'reg')
+    ('I0', 'f2io_16')
+  e2
+    ('r125', 'reg')
+    ('i1', 'f2io_1')
+  e3
+    ('r43', 'reg')
+    ('r2', 'reg')
+    ('p64', 'data0')
+  e4
+    ('r2', 'reg')
+    ('r3', 'reg')
+    ('p70', 'data0')
+  e5
+    ('r3', 'reg')
+    ('r4', 'reg')
+    ('p69', 'data0')
+  e6
+    ('r4', 'reg')
+    ('r5', 'reg')
+    ('p72', 'data0')
+  e7
+    ('r5', 'reg')
+    ('r6', 'reg')
+    ('p71', 'data0')
+  e8
+    ('m46', 'output_width_16_num_0')
+    ('r7', 'reg')
+    ('p76', 'data0')
+  e14
+    ('r7', 'reg')
+    ('r8', 'reg')
+    ('p75', 'data0')
+  e15
+    ('r8', 'reg')
+    ('r9', 'reg')
+    ('p74', 'data0')
+  e16
+    ('r9', 'reg')
+    ('r10', 'reg')
+    ('p82', 'data0')
+  e17
+    ('r10', 'reg')
+    ('r11', 'reg')
+    ('p81', 'data0')
+  e18
+    ('r11', 'reg')
+    ('r12', 'reg')
+    ('p84', 'data0')
+  e20
+    ('m45', 'output_width_16_num_1')
+    ('r13', 'reg')
+    ('p89', 'data0')
+  e25
+    ('r13', 'reg')
+    ('r14', 'reg')
+    ('p88', 'data0')
+  e26
+    ('r14', 'reg')
+    ('r15', 'reg')
+    ('p87', 'data0')
+  e27
+    ('r15', 'reg')
+    ('r16', 'reg')
+    ('p86', 'data0')
+  e28
+    ('r16', 'reg')
+    ('r17', 'reg')
+    ('p92', 'data0')
+  e29
+    ('r17', 'reg')
+    ('r18', 'reg')
+    ('p91', 'data0')
+  e19
+    ('m45', 'output_width_16_num_0')
+    ('r19', 'reg')
+    ('p93', 'data0')
+  e30
+    ('r19', 'reg')
+    ('r20', 'reg')
+    ('p99', 'data0')
+  e31
+    ('r20', 'reg')
+    ('r21', 'reg')
+    ('p98', 'data0')
+  e32
+    ('r55', 'reg')
+    ('r22', 'reg')
+  e33
+    ('r21', 'reg')
+    ('r23', 'reg')
+    ('p97', 'data0')
+  e34
+    ('r23', 'reg')
+    ('r24', 'reg')
+    ('p96', 'data0')
+  e35
+    ('r24', 'reg')
+    ('r25', 'reg')
+    ('p113', 'data0')
+  e36
+    ('m44', 'output_width_16_num_0')
+    ('r26', 'reg')
+    ('p115', 'data0')
+  e42
+    ('r26', 'reg')
+    ('r27', 'reg')
+    ('p114', 'data0')
+  e43
+    ('r27', 'reg')
+    ('r28', 'reg')
+    ('p120', 'data0')
+  e44
+    ('r28', 'reg')
+    ('r29', 'reg')
+    ('p119', 'data0')
+  e45
+    ('r29', 'reg')
+    ('r30', 'reg')
+    ('p118', 'data0')
+  e46
+    ('r30', 'reg')
+    ('r31', 'reg')
+  e37
+    ('m44', 'output_width_16_num_1')
+    ('r32', 'reg')
+    ('p103', 'data0')
+  e47
+    ('r22', 'reg')
+    ('r33', 'reg')
+    ('p80', 'data0')
+  e48
+    ('r32', 'reg')
+    ('r34', 'reg')
+    ('p102', 'data0')
+  e49
+    ('r34', 'reg')
+    ('r35', 'reg')
+    ('p105', 'data0')
+  e50
+    ('r35', 'reg')
+    ('r36', 'reg')
+    ('p104', 'data0')
+  e51
+    ('r36', 'reg')
+    ('r37', 'reg')
+    ('p110', 'data0')
+  e52
+    ('r37', 'reg')
+    ('r38', 'reg')
+    ('p109', 'data0')
+  e53
+    ('r33', 'reg')
+    ('r39', 'reg')
+    ('p59', 'data0')
+  e54
+    ('r39', 'reg')
+    ('r40', 'reg')
+    ('p62', 'data0')
+  e55
+    ('r40', 'reg')
+    ('r41', 'reg')
+    ('p61', 'data0')
+  e56
+    ('r41', 'reg')
+    ('r42', 'reg')
+    ('p67', 'data0')
+  e9
+    ('m46', 'output_width_16_num_1')
+    ('r43', 'reg')
+    ('p65', 'data0')
+  e57
+    ('r56', 'reg')
+    ('m44', 'input_width_16_num_2')
+  e58
+    ('r57', 'reg')
+    ('m45', 'input_width_16_num_2')
+  e59
+    ('r58', 'reg')
+    ('m46', 'input_width_16_num_2')
+  e60
+    ('I48', 'io2f_16')
+    ('r49', 'reg')
+  e62
+    ('r49', 'reg')
+    ('r50', 'reg')
+  e63
+    ('r50', 'reg')
+    ('r51', 'reg')
+  e64
+    ('r51', 'reg')
+    ('r52', 'reg')
+    ('r53', 'reg')
+  e65
+    ('r52', 'reg')
+    ('r54', 'reg')
+    ('r55', 'reg')
+    ('r56', 'reg')
+    ('r57', 'reg')
+  e66
+    ('r53', 'reg')
+    ('r58', 'reg')
+  e67
+    ('r54', 'reg')
+    ('p60', 'data0')
+  e68
+    ('p59', 'res')
+    ('p60', 'data2')
+  e73
+    ('p60', 'res')
+    ('p63', 'data0')
+  e78
+    ('p61', 'res')
+    ('p62', 'data2')
+  e83
+    ('p62', 'res')
+    ('p63', 'data2')
+  e88
+    ('p63', 'res')
+    ('p68', 'data0')
+  e93
+    ('p64', 'res')
+    ('p65', 'data2')
+  e98
+    ('p65', 'res')
+    ('p68', 'data1')
+  e103
+    ('r42', 'reg')
+    ('p66', 'data0')
+  e104
+    ('p66', 'res')
+    ('p67', 'data2')
+  e109
+    ('p67', 'res')
+    ('p68', 'data2')
+  e114
+    ('p68', 'res')
+    ('p79', 'data0')
+  e119
+    ('p69', 'res')
+    ('p70', 'data2')
+  e124
+    ('p70', 'res')
+    ('p73', 'data0')
+  e129
+    ('p71', 'res')
+    ('p72', 'data2')
+  e134
+    ('p72', 'res')
+    ('p73', 'data2')
+  e139
+    ('p73', 'res')
+    ('p78', 'data0')
+  e144
+    ('p74', 'res')
+    ('p75', 'data2')
+  e149
+    ('p75', 'res')
+    ('p78', 'data1')
+  e154
+    ('r6', 'reg')
+    ('p77', 'data0')
+  e155
+    ('p76', 'res')
+    ('p77', 'data2')
+  e160
+    ('p77', 'res')
+    ('p78', 'data2')
+  e165
+    ('p78', 'res')
+    ('p79', 'data2')
+  e170
+    ('p79', 'res')
+    ('p80', 'data2')
+  e175
+    ('p80', 'res')
+    ('p123', 'data0')
+  e180
+    ('p81', 'res')
+    ('p82', 'data2')
+  e185
+    ('p82', 'res')
+    ('p85', 'data0')
+  e190
+    ('r12', 'reg')
+    ('p83', 'data0')
+  e191
+    ('p83', 'res')
+    ('p84', 'data2')
+  e196
+    ('p84', 'res')
+    ('p85', 'data2')
+  e201
+    ('p85', 'res')
+    ('p90', 'data0')
+  e206
+    ('p86', 'res')
+    ('p87', 'data2')
+  e211
+    ('p87', 'res')
+    ('p90', 'data1')
+  e216
+    ('p88', 'res')
+    ('p89', 'data2')
+  e221
+    ('p89', 'res')
+    ('p90', 'data2')
+  e226
+    ('p90', 'res')
+    ('p101', 'data0')
+  e231
+    ('p91', 'res')
+    ('p92', 'data2')
+  e236
+    ('p92', 'res')
+    ('p95', 'data0')
+  e241
+    ('r18', 'reg')
+    ('p94', 'data0')
+  e242
+    ('p93', 'res')
+    ('p94', 'data2')
+  e247
+    ('p94', 'res')
+    ('p95', 'data2')
+  e252
+    ('p95', 'res')
+    ('p100', 'data0')
+  e257
+    ('p96', 'res')
+    ('p97', 'data2')
+  e262
+    ('p97', 'res')
+    ('p100', 'data1')
+  e267
+    ('p98', 'res')
+    ('p99', 'data2')
+  e272
+    ('p99', 'res')
+    ('p100', 'data2')
+  e277
+    ('p100', 'res')
+    ('p101', 'data2')
+  e282
+    ('p101', 'res')
+    ('p122', 'data0')
+  e287
+    ('p102', 'res')
+    ('p103', 'data2')
+  e292
+    ('p103', 'res')
+    ('p106', 'data0')
+  e297
+    ('p104', 'res')
+    ('p105', 'data2')
+  e302
+    ('p105', 'res')
+    ('p106', 'data2')
+  e307
+    ('p106', 'res')
+    ('p111', 'data0')
+  e312
+    ('r38', 'reg')
+    ('p108', 'data1')
+  e313
+    ('p107', 'res')
+    ('p108', 'data2')
+  e318
+    ('p108', 'res')
+    ('p111', 'data1')
+  e323
+    ('p109', 'res')
+    ('p110', 'data2')
+  e328
+    ('p110', 'res')
+    ('p111', 'data2')
+  e333
+    ('p111', 'res')
+    ('p122', 'data1')
+  e338
+    ('r25', 'reg')
+    ('p112', 'data0')
+  e339
+    ('p112', 'res')
+    ('p113', 'data2')
+  e344
+    ('p113', 'res')
+    ('p116', 'data0')
+  e349
+    ('p114', 'res')
+    ('p115', 'data2')
+  e354
+    ('p115', 'res')
+    ('p116', 'data2')
+  e359
+    ('p116', 'res')
+    ('p121', 'data0')
+  e364
+    ('r31', 'reg')
+    ('p117', 'data0')
+  e365
+    ('p117', 'res')
+    ('p118', 'data2')
+  e370
+    ('p118', 'res')
+    ('p121', 'data1')
+  e375
+    ('p119', 'res')
+    ('p120', 'data2')
+  e380
+    ('p120', 'res')
+    ('p121', 'data2')
+  e385
+    ('p121', 'res')
+    ('p122', 'data2')
+  e390
+    ('p122', 'res')
+    ('p123', 'data2')
+  e395
+    ('p123', 'res')
+    ('r124', 'reg')
+  e404
+    ('m47', 'output_width_1_num_3')
+    ('r125', 'reg')

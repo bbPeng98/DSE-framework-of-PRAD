@@ -1,0 +1,2 @@
+layout=/aha/Halide-to-Hardware/apps/hardware_benchmarks/apps/camera_pipeline_2x2/bin/design.layout
+graph=1 /aha/Halide-to-Hardware/apps/hardware_benchmarks/apps/camera_pipeline_2x2/bin/1.graph 16 /aha/Halide-to-Hardware/apps/hardware_benchmarks/apps/camera_pipeline_2x2/bin/16.graph

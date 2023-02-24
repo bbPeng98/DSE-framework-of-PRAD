@@ -1,0 +1,2 @@
+layout=/aha/Halide-to-Hardware/apps/hardware_benchmarks/apps/resnet_pond_layer/bin/design.layout
+graph=1 /aha/Halide-to-Hardware/apps/hardware_benchmarks/apps/resnet_pond_layer/bin/1.graph 16 /aha/Halide-to-Hardware/apps/hardware_benchmarks/apps/resnet_pond_layer/bin/16.graph

@@ -1,0 +1,1 @@
+prog laplacian_pyramid();
