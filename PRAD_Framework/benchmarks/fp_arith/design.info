@@ -1,2 +1,0 @@
-layout=/home/ssy/AHA_GIB/benchmarks/fp_arith/design.layout
-graph=1 /home/ssy/AHA_GIB/benchmarks/fp_arith/1bit.graph 16 /home/ssy/AHA_GIB/benchmarks/fp_arith/16bit.graph

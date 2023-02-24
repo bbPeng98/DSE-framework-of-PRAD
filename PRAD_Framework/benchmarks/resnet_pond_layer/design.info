@@ -1,2 +1,0 @@
-layout=/home/dai-dirk/AHA_GIB/benchmarks/resnet_pond_layer/design.layout
-graph=1 /home/dai-dirk/AHA_GIB/benchmarks/resnet_pond_layer/1bit.graph 16 /home/dai-dirk/AHA_GIB/benchmarks/resnet_pond_layer/16bit.graph

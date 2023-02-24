@@ -1,4 +1,0 @@
-Wire_num: 177
-total GIB usage: 516
-Maximum GIB usage: 14
-Average GIB usage: 2.9152542372881354
