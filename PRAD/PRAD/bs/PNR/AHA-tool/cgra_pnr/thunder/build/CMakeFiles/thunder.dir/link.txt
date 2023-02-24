@@ -1,2 +1,0 @@
-/usr/bin/ar qc libthunder.a  CMakeFiles/thunder.dir/src/anneal.cc.o CMakeFiles/thunder.dir/src/util.cc.o CMakeFiles/thunder.dir/src/detailed.cc.o CMakeFiles/thunder.dir/src/multi_place.cc.o CMakeFiles/thunder.dir/src/global.cc.o CMakeFiles/thunder.dir/src/vpr.cc.o CMakeFiles/thunder.dir/src/io.cc.o CMakeFiles/thunder.dir/src/layout.cc.o CMakeFiles/thunder.dir/src/graph.cc.o
-/usr/bin/ranlib libthunder.a

@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -Wall -Wextra -Werror -fPIC -funroll-all-loops -O3 -DNDEBUG -flto -shared  -o pycyclone.cpython-38-x86_64-linux-gnu.so CMakeFiles/pycyclone.dir/cyclone.cc.o  ../libcyclone.a -static-libgcc -static-libstdc++ 

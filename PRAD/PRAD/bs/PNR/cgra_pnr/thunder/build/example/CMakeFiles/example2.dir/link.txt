@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -Werror -fPIC -funroll-all-loops -Wno-deprecated-copy -O3 -DNDEBUG   CMakeFiles/example2.dir/example2.cc.o  -o example2  ../libthunder.a ../lib/leidenalg/libleidenalg.a /usr/lib/x86_64-linux-gnu/libigraph.so -static-libgcc -static-libstdc++ -lpthread 

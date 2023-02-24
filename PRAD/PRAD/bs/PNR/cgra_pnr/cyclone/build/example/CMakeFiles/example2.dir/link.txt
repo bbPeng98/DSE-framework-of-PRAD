@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -Werror -fPIC -funroll-all-loops -O3 -DNDEBUG  -rdynamic CMakeFiles/example2.dir/example2.cc.o  -o example2  ../libcyclone.a 
