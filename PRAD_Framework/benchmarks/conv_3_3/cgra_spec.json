@@ -1,0 +1,54 @@
+{
+    "num_row": 2,
+    "num_colum": 6,
+    "num_track_coarse": 2,
+    "num_track_fine": 0,
+    "connect_flexibility_coarse": {
+        "num_otrack_per_opin": 2,
+        "num_itrack_per_ipin": 4,
+        "num_ipin_per_opin": 8
+    },
+    "connect_flexibility_fine": {
+        "num_otrack_per_opin": 2,
+        "num_itrack_per_ipin": 6,
+        "num_ipin_per_opin": 4
+    },
+    "lut_n": 3,
+    "has_3input": 1,
+    "PEinputnum": [
+        3,
+        3
+    ],
+    "operations": {
+        "Add": 0,
+        "MULADD": 1,
+        "TAA": 2,
+        "TAS": 3,
+        "TSA": 4,
+        "TSS": 5
+    },
+    "diag_iopin_connect": true,
+    "track_reged_mode": 2,
+    "data_width": 16,
+    "cfg_data_width": 32,
+    "cfg_addr_width": 32,
+    "cfg_addr_width_Unit": 8,
+    "cfg_blk_offset": 4,
+    "functionSelect": 1,
+    "interconnect_output_ports": 2,
+    "mem_width": 64,
+    "mem_depth": 512,
+    "use_sram_stub": 0,
+    "iterator_support": 6,
+    "config_width": 16,
+    "interconnect_input_ports": 2,
+    "agg_addr_width": 4,
+    "agg_iter_support": 6,
+    "agg_range_width": 16,
+    "tb_range_width": 16,
+    "tb_addr_width": 4,
+    "banks": 1,
+    "tb_height": 2,
+    "agg_height": 4,
+    "agg_rd_addr_gen_width": 8
+}

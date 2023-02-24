@@ -1,0 +1,58 @@
+Netlists:
+e1: (r17, reg)	(I0, f2io_16)
+e2: (r18, reg)	(i1, f2io_1)
+e3: (I3, io2f_16)	(r4, reg)
+e5: (r4, reg)	(r5, reg)	(r6, reg)	(r7, reg)	(r8, reg)
+e6: (r5, reg)	(p9, data0)
+e8: (p9, res_p)	(p11, bit0)
+e12: (r6, reg)	(p10, data1)
+e14: (p10, res_p)	(p11, bit2)
+e19: (p11, res_p)	(p15, bit0)
+e23: (r7, reg)	(p12, data0)
+e25: (p12, res_p)	(p14, bit0)
+e29: (r8, reg)	(p13, data1)
+e31: (p13, res_p)	(p14, bit2)
+e36: (p14, res_p)	(p15, bit2)
+e41: (p15, res_p)	(p16, bit0)
+e45: (p16, res)	(r17, reg)
+e54: (m2, output_width_1_num_3)	(r18, reg)
+
+ID to Names:
+I0: io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0
+i1: io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid
+m2: op_hcompute_hw_output_stencil_port_controller_garnet
+I3: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0
+r4: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg0
+r5: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg1
+r6: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg2
+r7: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg3
+r8: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg4
+p9: op_hcompute_hw_output_stencil$inner_compute$slt_hw_input_global_wrapper_stencil_1_271_272_i2605_i1944
+p10: op_hcompute_hw_output_stencil$inner_compute$slt_273_hw_input_global_wrapper_stencil_1_274_i2607_i1944
+p11: op_hcompute_hw_output_stencil$inner_compute$bitand_278_280_281_tree$opN_0$_join_i2608_i1823
+p12: op_hcompute_hw_output_stencil$inner_compute$sle_hw_input_global_wrapper_stencil_1_276_277_i2610_i2430
+p13: op_hcompute_hw_output_stencil$inner_compute$sle_279_hw_input_global_wrapper_stencil_1_280_i2612_i2430
+p14: op_hcompute_hw_output_stencil$inner_compute$bitand_278_280_281_tree$opN_1$_join_i2613_i1823
+p15: op_hcompute_hw_output_stencil$inner_compute$bitand_278_280_281_tree$_join_i2614_i1823
+p16: op_hcompute_hw_output_stencil$inner_compute$mux_281_282_283_i2615_i1784
+r17: io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0$reg5
+r18: io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid$reg6
+
+Netlist Bus:
+e1: 16
+e2: 1
+e3: 16
+e5: 16
+e6: 16
+e8: 1
+e12: 16
+e14: 1
+e19: 1
+e23: 16
+e25: 1
+e29: 16
+e31: 1
+e36: 1
+e41: 1
+e45: 16
+e54: 1

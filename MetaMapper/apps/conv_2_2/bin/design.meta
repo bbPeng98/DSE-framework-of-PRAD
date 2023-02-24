@@ -1,0 +1,4 @@
+placement=design.place
+bitstream=conv_2_2.bs
+input=input.pgm
+output=gold.pgm

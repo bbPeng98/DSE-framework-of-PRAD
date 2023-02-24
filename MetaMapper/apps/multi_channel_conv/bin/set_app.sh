@@ -1,0 +1,2 @@
+export app=unoptimized_multi_channel_conv
+export HLS_CLOCK_FREQUENCY=250000000

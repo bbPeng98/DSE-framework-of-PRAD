@@ -1,0 +1,2 @@
+layout=/home/dai-dirk/AHA_GIB/benchmarks/mobilenet/design.layout
+graph=1 /home/dai-dirk/AHA_GIB/benchmarks/mobilenet/1bit.graph 16 /home/dai-dirk/AHA_GIB/benchmarks/mobilenet/16bit.graph

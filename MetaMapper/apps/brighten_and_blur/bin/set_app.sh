@@ -1,0 +1,2 @@
+export app=unoptimized_brighten_and_blur
+export HLS_CLOCK_FREQUENCY=250000000

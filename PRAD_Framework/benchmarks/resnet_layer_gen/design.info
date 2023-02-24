@@ -1,0 +1,2 @@
+layout=/home/ssy/AHA_GIB/benchmarks/resnet_layer_gen/design.layout
+graph=1 /home/ssy/AHA_GIB/benchmarks/resnet_layer_gen/1bit.graph 16 /home/ssy/AHA_GIB/benchmarks/resnet_layer_gen/16bit.graph

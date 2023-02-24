@@ -1,0 +1,98 @@
+id to instance name
+  I0  io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0
+  i1  io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid
+  m2  op_hcompute_hw_output_stencil_port_controller_garnet
+  I3  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0
+  r4  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg0
+  r5  io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg1
+  p6  op_hcompute_hw_output_stencil$inner_compute$add_hw_input_global_wrapper_stencil_1_273_274_i2605_i2231
+  p7  op_hcompute_hw_output_stencil$inner_compute$abs_274$mult_i2606_i1096
+  p8  op_hcompute_hw_output_stencil$inner_compute$abs_274$is_pos_i2608_i2391
+  p9  op_hcompute_hw_output_stencil$inner_compute$abs_274$out_mux_i2609_i1784
+  p10  op_hcompute_hw_output_stencil$inner_compute$absd_276_277_278$sub_i2611_i134
+  p11  op_hcompute_hw_output_stencil$inner_compute$absd_276_277_278$abs$mult_i2612_i1096
+  p12  op_hcompute_hw_output_stencil$inner_compute$absd_276_277_278$abs$is_pos_i2614_i2391
+  p13  op_hcompute_hw_output_stencil$inner_compute$absd_276_277_278$abs$out_mux_i2615_i1784
+  r14  io16_hw_output_stencil_op_hcompute_hw_output_stencil_write_0$reg2
+  r15  io1_hw_output_stencil_op_hcompute_hw_output_stencil_write_valid$reg3
+id_to_Instrs
+  I0, 2
+  i1, 2
+  m2, <class 'peak.mapper.utils.Unbound'>
+  I3, 1
+  r4, 0
+  r5, 0
+  p6, 157286451575409561043136
+  p7, 152297111705530711670860
+  p8, 11505025690915422679564036
+  p9, 226678779327812249059340
+  p10, 151118033360938896720004
+  p11, 152297111705530711670860
+  p12, 11505025690915422679564036
+  p13, 226678779327812249059340
+  r14, 0
+  r15, 0
+id_to_metadata
+  m2, {'ID': '_U0', 'config': {'stencil_valid': {'cycle_starting_addr': [2], 'cycle_stride': [1, 64], 'dimensionality': 2, 'extent': [64, 64]}}, 'has_external_addrgen': False, 'has_flush': True, 'has_read_valid': False, 'has_reset': False, 'has_stencil_valid': True, 'has_valid': False, 'is_rom': False, 'mode': 'lake', 'num_inputs': 1, 'num_outputs': 1, 'use_prebuilt_mem': True, 'width': 16}
+buses
+  e1, 16
+  e2, 1
+  e3, 16
+  e5, 16
+  e6, 16
+  e7, 16
+  e12, 16
+  e18, 1
+  e22, 16
+  e27, 16
+  e32, 16
+  e38, 1
+  e42, 16
+  e51, 1
+netlist
+  e1
+    ('r14', 'reg')
+    ('I0', 'f2io_16')
+  e2
+    ('r15', 'reg')
+    ('i1', 'f2io_1')
+  e3
+    ('I3', 'io2f_16')
+    ('r4', 'reg')
+  e5
+    ('r4', 'reg')
+    ('r5', 'reg')
+  e6
+    ('r5', 'reg')
+    ('p6', 'data2')
+  e7
+    ('p6', 'res')
+    ('p7', 'data1')
+    ('p8', 'data1')
+    ('p9', 'data0')
+  e12
+    ('p7', 'res')
+    ('p9', 'data1')
+  e18
+    ('p8', 'res_p')
+    ('p9', 'bit0')
+  e22
+    ('p9', 'res')
+    ('p10', 'data0')
+  e27
+    ('p10', 'res')
+    ('p11', 'data1')
+    ('p12', 'data1')
+    ('p13', 'data0')
+  e32
+    ('p11', 'res')
+    ('p13', 'data1')
+  e38
+    ('p12', 'res_p')
+    ('p13', 'bit0')
+  e42
+    ('p13', 'res')
+    ('r14', 'reg')
+  e51
+    ('m2', 'output_width_1_num_3')
+    ('r15', 'reg')

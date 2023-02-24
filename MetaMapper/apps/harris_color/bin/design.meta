@@ -1,0 +1,4 @@
+placement=design.place
+bitstream=harris_color.bs
+input=input.pgm
+output=gold.pgm
