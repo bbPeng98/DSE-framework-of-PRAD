@@ -1,0 +1,2 @@
+export app=unoptimized_mem_unbuffered
+export HLS_CLOCK_FREQUENCY=250000000

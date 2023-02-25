@@ -1,0 +1,9 @@
+Block Name			X	Y		#Block ID
+----------------------------
+io16_hw_output_stencil_clkwrk_0_op_hcompute_hw_output_stencil_write_0		1	0		#I0
+io1_hw_output_stencil_clkwrk_0_op_hcompute_hw_output_stencil_write_valid		1	0		#i1
+io16_hw_output_stencil_clkwrk_1_op_hcompute_hw_output_stencil_1_write_0		3	0		#I2
+io1_hw_output_stencil_clkwrk_1_op_hcompute_hw_output_stencil_1_write_valid		3	0		#i3
+io16_hw_output_stencil_clkwrk_2_op_hcompute_hw_output_stencil_2_write_0		5	0		#I4
+io1_hw_output_stencil_clkwrk_2_op_hcompute_hw_output_stencil_2_write_valid		5	0		#i5
+io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0		0	0		#I329

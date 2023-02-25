@@ -1,0 +1,4 @@
+placement=design.place
+bitstream=brighten_and_blur.bs
+input=input.pgm
+output=gold.pgm

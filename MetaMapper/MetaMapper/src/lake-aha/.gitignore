@@ -1,0 +1,37 @@
+########
+# SWAP #
+########
+*.swp
+.magma/
+*.txt
+*.csv
+*.json
+
+###############
+# Build Files #
+###############
+build
+dist
+lake.egg-info
+
+###########
+# pycache #
+###########
+*__pycache__*
+
+###########
+# venvs   #
+###########
+venv/*
+
+# dump
+dump/
+*dump*
+# verilog outputs
+*.sv
+*.vscode
+
+*.idea
+
+# local clone of clockwork
+clockwork

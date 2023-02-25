@@ -1,0 +1,299 @@
+Netlists:
+e1: (r46, reg)	(I0, f2io_16)
+e2: (r47, reg)	(i1, f2io_1)
+e3: (r48, reg)	(I2, f2io_16)
+e4: (r49, reg)	(i3, f2io_1)
+e5: (r50, reg)	(I4, f2io_16)
+e6: (r51, reg)	(i5, f2io_1)
+e7: (r58, reg)	(m12, flush)
+e12: (m39, data_out_0)	(p10, data0)
+e20: (m29, data_out_0)	(p10, data1)	(p18, data1)	(p25, data1)
+e28: (m31, data_out_0)	(p6, data0)
+e36: (m27, data_out_0)	(p6, data1)	(p14, data1)	(p21, data1)
+e40: (m12, data_out_1)	(r46, reg)
+e44: (m12, data_out_0)	(p6, data2)
+e48: (p6, res)	(p9, data1)
+e54: (m42, data_out_0)	(p8, data0)
+e62: (m30, data_out_0)	(p8, data1)	(p16, data1)	(p23, data1)
+e70: (m36, data_out_0)	(p7, data0)
+e78: (m28, data_out_0)	(p7, data1)	(p15, data1)	(p22, data1)
+e82: (p7, res)	(p8, data2)
+e84: (p8, res)	(p9, data2)
+e86: (p9, res)	(p10, data2)
+e88: (p10, res)	(m12, data_in_0)
+e90: (p11, res)	(m12, data_in_1)
+e92: (r59, reg)	(m19, flush)
+e93: (p13, res)	(m19, data_in_0)
+e99: (m40, data_out_0)	(p18, data0)
+e107: (m34, data_out_0)	(p14, data0)
+e111: (m19, data_out_1)	(r48, reg)
+e115: (m19, data_out_0)	(p14, data2)
+e119: (p14, res)	(p17, data1)
+e125: (m32, data_out_0)	(p16, data0)
+e133: (m37, data_out_0)	(p15, data0)
+e137: (p15, res)	(p16, data2)
+e139: (p16, res)	(p17, data2)
+e141: (p17, res)	(p18, data2)
+e143: (p18, res)	(m19, data_in_1)
+e145: (r60, reg)	(m26, flush)
+e146: (p20, res)	(m26, data_in_0)
+e152: (m41, data_out_0)	(p25, data0)
+e160: (m35, data_out_0)	(p21, data0)
+e164: (m26, data_out_1)	(r50, reg)
+e168: (m26, data_out_0)	(p21, data2)
+e172: (p21, res)	(p24, data1)
+e178: (m33, data_out_0)	(p23, data0)
+e186: (m38, data_out_0)	(p22, data0)
+e190: (p22, res)	(p23, data2)
+e192: (p23, res)	(p24, data2)
+e194: (p24, res)	(p25, data2)
+e196: (p25, res)	(m26, data_in_1)
+e198: (r61, reg)	(m27, flush)
+e199: (r78, reg)	(m27, data_in_0)
+e200: (r62, reg)	(m28, flush)
+e201: (r79, reg)	(m28, data_in_0)
+e202: (r63, reg)	(m29, flush)
+e203: (r80, reg)	(m29, data_in_0)
+e204: (r64, reg)	(m30, flush)
+e205: (r81, reg)	(m30, data_in_0)
+e206: (r65, reg)	(m31, flush)
+e207: (r88, reg)	(m31, data_in_0)
+e208: (r66, reg)	(m32, flush)
+e209: (r89, reg)	(m32, data_in_0)
+e210: (r67, reg)	(m33, flush)
+e211: (r90, reg)	(m33, data_in_0)
+e212: (r68, reg)	(m34, flush)
+e213: (r91, reg)	(m34, data_in_0)
+e214: (r69, reg)	(m35, flush)
+e215: (r92, reg)	(m35, data_in_0)
+e216: (r70, reg)	(m36, flush)
+e217: (r93, reg)	(m36, data_in_0)
+e218: (r71, reg)	(m37, flush)
+e219: (r94, reg)	(m37, data_in_0)
+e220: (r72, reg)	(m38, flush)
+e221: (r95, reg)	(m38, data_in_0)
+e222: (r73, reg)	(m39, flush)	(m40, flush)	(m41, flush)	(m42, flush)	(m43, flush)	(m44, flush)	(m45, flush)
+e223: (r96, reg)	(m39, data_in_0)
+e224: (r97, reg)	(m40, data_in_0)
+e225: (r98, reg)	(m41, data_in_0)
+e226: (r99, reg)	(m42, data_in_0)
+e229: (m45, stencil_valid)	(r47, reg)
+e237: (m43, stencil_valid)	(r49, reg)
+e245: (m44, stencil_valid)	(r51, reg)
+e252: (i52, io2f_1)	(r53, reg)
+e253: (r53, reg)	(r54, reg)	(r55, reg)	(r56, reg)	(r57, reg)
+e254: (r54, reg)	(r58, reg)	(r59, reg)	(r60, reg)	(r61, reg)
+e255: (r55, reg)	(r62, reg)	(r63, reg)	(r64, reg)	(r65, reg)
+e256: (r56, reg)	(r66, reg)	(r67, reg)	(r68, reg)	(r69, reg)
+e257: (r57, reg)	(r70, reg)	(r71, reg)	(r72, reg)	(r73, reg)
+e258: (I74, io2f_16)	(r75, reg)
+e260: (r75, reg)	(r76, reg)
+e261: (r76, reg)	(r77, reg)
+e262: (r77, reg)	(r78, reg)	(r79, reg)	(r80, reg)	(r81, reg)
+e263: (I82, io2f_16)	(r83, reg)
+e265: (r83, reg)	(r84, reg)
+e266: (r84, reg)	(r85, reg)	(r86, reg)	(r87, reg)
+e267: (r85, reg)	(r88, reg)	(r89, reg)	(r90, reg)	(r91, reg)
+e268: (r86, reg)	(r92, reg)	(r93, reg)	(r94, reg)	(r95, reg)
+e269: (r87, reg)	(r96, reg)	(r97, reg)	(r98, reg)	(r99, reg)
+
+ID to Names:
+I0: io16_hw_output_stencil_clkwrk_0_op_hcompute_hw_output_stencil_write_0
+i1: io1_hw_output_stencil_clkwrk_0_op_hcompute_hw_output_stencil_write_valid
+I2: io16_hw_output_stencil_clkwrk_1_op_hcompute_hw_output_stencil_1_write_0
+i3: io1_hw_output_stencil_clkwrk_1_op_hcompute_hw_output_stencil_1_write_valid
+I4: io16_hw_output_stencil_clkwrk_2_op_hcompute_hw_output_stencil_2_write_0
+i5: io1_hw_output_stencil_clkwrk_2_op_hcompute_hw_output_stencil_2_write_valid
+p6: op_hcompute_conv_stencil_3$inner_compute$add_683_689_690_tree$opN_0$opN_0$_join_i2153_i1110
+p7: op_hcompute_conv_stencil_3$inner_compute$mul_hw_kernel_global_wrapper_stencil_2_hw_input_global_wrapper_stencil_2_684_i2156_i1461
+p8: op_hcompute_conv_stencil_3$inner_compute$add_683_689_690_tree$opN_0$opN_1$_join_i2160_i2127
+p9: op_hcompute_conv_stencil_3$inner_compute$add_683_689_690_tree$opN_0$_join_i2161_i1808
+p10: op_hcompute_conv_stencil_3$inner_compute$add_683_689_690_tree$_join_i2165_i2127
+p11: op_hcompute_conv_stencil$inner_compute$i2132_i2133_i131
+m12: conv_stencil$ub_conv_stencil_BANK_0_garnet
+p13: op_hcompute_conv_stencil_1$inner_compute$i2137_i2138_i131
+p14: op_hcompute_conv_stencil_4$inner_compute$add_718_724_725_tree$opN_0$opN_0$_join_i2178_i1110
+p15: op_hcompute_conv_stencil_4$inner_compute$mul_hw_kernel_global_wrapper_stencil_6_hw_input_global_wrapper_stencil_6_719_i2181_i1461
+p16: op_hcompute_conv_stencil_4$inner_compute$add_718_724_725_tree$opN_0$opN_1$_join_i2185_i2127
+p17: op_hcompute_conv_stencil_4$inner_compute$add_718_724_725_tree$opN_0$_join_i2186_i1808
+p18: op_hcompute_conv_stencil_4$inner_compute$add_718_724_725_tree$_join_i2190_i2127
+m19: conv_stencil$ub_conv_stencil_BANK_1_garnet
+p20: op_hcompute_conv_stencil_2$inner_compute$i2142_i2143_i131
+p21: op_hcompute_conv_stencil_5$inner_compute$add_753_759_760_tree$opN_0$opN_0$_join_i2203_i1110
+p22: op_hcompute_conv_stencil_5$inner_compute$mul_hw_kernel_global_wrapper_stencil_10_hw_input_global_wrapper_stencil_10_754_i2206_i1461
+p23: op_hcompute_conv_stencil_5$inner_compute$add_753_759_760_tree$opN_0$opN_1$_join_i2210_i2127
+p24: op_hcompute_conv_stencil_5$inner_compute$add_753_759_760_tree$opN_0$_join_i2211_i1808
+p25: op_hcompute_conv_stencil_5$inner_compute$add_753_759_760_tree$_join_i2215_i2127
+m26: conv_stencil$ub_conv_stencil_BANK_2_garnet
+m27: hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_BANK_0_garnet
+m28: hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_BANK_1_garnet
+m29: hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_BANK_2_garnet
+m30: hw_input_global_wrapper_stencil$ub_hw_input_global_wrapper_stencil_BANK_3_garnet
+m31: hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_0_garnet
+m32: hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_10_garnet
+m33: hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_11_garnet
+m34: hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_1_garnet
+m35: hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_2_garnet
+m36: hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_3_garnet
+m37: hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_4_garnet
+m38: hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_5_garnet
+m39: hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_6_garnet
+m40: hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_7_garnet
+m41: hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_8_garnet
+m42: hw_kernel_global_wrapper_stencil$ub_hw_kernel_global_wrapper_stencil_BANK_9_garnet
+m43: op_hcompute_hw_output_stencil_1_port_controller_garnet
+m44: op_hcompute_hw_output_stencil_2_port_controller_garnet
+m45: op_hcompute_hw_output_stencil_port_controller_garnet
+r46: io16_hw_output_stencil_clkwrk_0_op_hcompute_hw_output_stencil_write_0$reg0
+r47: io1_hw_output_stencil_clkwrk_0_op_hcompute_hw_output_stencil_write_valid$reg1
+r48: io16_hw_output_stencil_clkwrk_1_op_hcompute_hw_output_stencil_1_write_0$reg2
+r49: io1_hw_output_stencil_clkwrk_1_op_hcompute_hw_output_stencil_1_write_valid$reg3
+r50: io16_hw_output_stencil_clkwrk_2_op_hcompute_hw_output_stencil_2_write_0$reg4
+r51: io1_hw_output_stencil_clkwrk_2_op_hcompute_hw_output_stencil_2_write_valid$reg5
+i52: io1in_reset
+r53: io1in_reset$reg6
+r54: io1in_reset$reg7
+r55: io1in_reset$reg8
+r56: io1in_reset$reg9
+r57: io1in_reset$reg10
+r58: io1in_reset$reg11
+r59: io1in_reset$reg12
+r60: io1in_reset$reg13
+r61: io1in_reset$reg14
+r62: io1in_reset$reg15
+r63: io1in_reset$reg16
+r64: io1in_reset$reg17
+r65: io1in_reset$reg18
+r66: io1in_reset$reg19
+r67: io1in_reset$reg20
+r68: io1in_reset$reg21
+r69: io1in_reset$reg22
+r70: io1in_reset$reg23
+r71: io1in_reset$reg24
+r72: io1in_reset$reg25
+r73: io1in_reset$reg26
+I74: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0
+r75: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg27
+r76: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg28
+r77: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg29
+r78: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg30
+r79: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg31
+r80: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg32
+r81: io16in_hw_input_stencil_op_hcompute_hw_input_global_wrapper_stencil_read_0$reg33
+I82: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0
+r83: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg34
+r84: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg35
+r85: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg36
+r86: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg37
+r87: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg38
+r88: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg39
+r89: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg40
+r90: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg41
+r91: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg42
+r92: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg43
+r93: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg44
+r94: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg45
+r95: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg46
+r96: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg47
+r97: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg48
+r98: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg49
+r99: io16in_hw_kernel_stencil_op_hcompute_hw_kernel_global_wrapper_stencil_read_0$reg50
+
+Netlist Bus:
+e1: 16
+e2: 1
+e3: 16
+e4: 1
+e5: 16
+e6: 1
+e7: 1
+e12: 16
+e20: 16
+e28: 16
+e36: 16
+e40: 16
+e44: 16
+e48: 16
+e54: 16
+e62: 16
+e70: 16
+e78: 16
+e82: 16
+e84: 16
+e86: 16
+e88: 16
+e90: 16
+e92: 1
+e93: 16
+e99: 16
+e107: 16
+e111: 16
+e115: 16
+e119: 16
+e125: 16
+e133: 16
+e137: 16
+e139: 16
+e141: 16
+e143: 16
+e145: 1
+e146: 16
+e152: 16
+e160: 16
+e164: 16
+e168: 16
+e172: 16
+e178: 16
+e186: 16
+e190: 16
+e192: 16
+e194: 16
+e196: 16
+e198: 1
+e199: 16
+e200: 1
+e201: 16
+e202: 1
+e203: 16
+e204: 1
+e205: 16
+e206: 1
+e207: 16
+e208: 1
+e209: 16
+e210: 1
+e211: 16
+e212: 1
+e213: 16
+e214: 1
+e215: 16
+e216: 1
+e217: 16
+e218: 1
+e219: 16
+e220: 1
+e221: 16
+e222: 1
+e223: 16
+e224: 16
+e225: 16
+e226: 16
+e229: 1
+e237: 1
+e245: 1
+e252: 1
+e253: 1
+e254: 1
+e255: 1
+e256: 1
+e257: 1
+e258: 16
+e260: 16
+e261: 16
+e262: 16
+e263: 16
+e265: 16
+e266: 16
+e267: 16
+e268: 16
+e269: 16

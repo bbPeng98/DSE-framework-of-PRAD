@@ -1,0 +1,5 @@
+hwtypes
+magma-lang
+mantle
+ordered_set
+pyverilog

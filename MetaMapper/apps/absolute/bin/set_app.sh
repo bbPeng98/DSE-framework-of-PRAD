@@ -1,0 +1,2 @@
+export app=unoptimized_absolute
+export HLS_CLOCK_FREQUENCY=250000000
